@@ -1,0 +1,64 @@
+<template>
+    <div ref="warpper">
+        <slot></slot>
+    </div>
+</template>
+
+<script>
+    import BScroll from 'better-scroll'
+
+    export default {
+        name: "scroll",
+        props: {
+            prbeType: {
+                type: Number,
+                default: 1
+            },
+            click: {
+                type: Boolean,
+                default: true
+            },
+            data: {
+                type: Array,
+                default: null
+            }
+        },
+        mounted() {
+            setTimeout(()=>{
+                this._initScroll();
+            },20)
+        },
+        methods: {
+            _initScroll(){
+                if(!this.$refs.warpper){
+                    return
+                }
+                this.scroll = new BScroll(this.$refs.warpper,{
+                    probeType:this.probeType,
+                    click : this.click
+                })
+            },
+            enable(){
+                this.scroll && this.scroll.enable();
+            },
+            disable(){
+                this.scroll && this.scroll.disable();
+            },
+            refresh(){
+                this.scroll && this.scroll.refresh();
+            }
+        },
+        watch:{
+            //监听数据变化 重置 scroll
+            data(){
+                setTimeout(()=>{
+                    this.refresh();
+                },20)
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
