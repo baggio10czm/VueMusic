@@ -33,7 +33,6 @@ export function request(param) {
     axios({
         method: param.methods || 'get',
         url: param.url,
-        responseType: param.type || 'json',
         data: param.data || '',
     })
         .then(function (res) {
@@ -46,6 +45,6 @@ export function request(param) {
             }
         })
         .catch(function (err) {
-            typeof param.error === 'function' && param.error(err.statusText);
+            typeof param.error === 'function' && param.error(err);
         })
 }
