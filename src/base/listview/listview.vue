@@ -126,6 +126,7 @@
             }
         },
         watch: {
+            //数据更新 重置所有 listGroup 的滚动值
             data() {
                 setTimeout(() => {
                     this._calculateHeight();
