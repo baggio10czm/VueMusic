@@ -5,18 +5,21 @@
             :listenScroll="listenScroll"
             :probeType="probeType"
             @scroll="scroll">
+        <!--歌手列表-->
         <ul>
             <!-- ref="listGroup" 方便后面获取所有li的dom 并用 scrollToElement 指向跳转 -->
             <li v-for="group in data" class="list-group" ref="listGroup">
                 <h2 class="list-group-title">{{group.title}}</h2>
                 <ul>
-                    <li v-for="item in group.items" class="list-group-item">
+                    <li @click="selectItem(item)" v-for="item in group.items" class="list-group-item">
                         <img class="avatar" v-lazy="item.avatar">
                         <span class="name">{{item.name}}</span>
                     </li>
                 </ul>
             </li>
         </ul>
+        <!--歌手列表 end-->
+        <!--字幕导航-->
         <!-- @touchstart="" 移动端点击;  @touchmove="" 移动端移动 .stop 阻止冒泡  .prevent 阻止浏览器默认行为  -->
         <div class="list-shortcut" @touchstart="onShortcutTouchStart" @touchmove.stop.prevent="onShortcutTouchMove">
             <ul>
@@ -26,12 +29,17 @@
                 </li>
             </ul>
         </div>
+        <!--字幕导航 end-->
+        <!--固定标题-->
         <div class="list-fixed" v-show="fixedTitle" ref="fixed">
             <h1 class="fixed-title">{{fixedTitle}}</h1>
         </div>
+        <!--固定标题 end-->
+        <!--loading-->
         <div v-show="!data.length" class="loading-container">
             <loading></loading>
         </div>
+        <!--loading end-->
     </Scroll>
 </template>
 
@@ -123,6 +131,10 @@
                     height += list[i].clientHeight;
                     this.listHeight.push(height);
                 }
+            },
+            //点击歌手 派发事件
+            selectItem(item){
+                this.$emit('select',item)
             }
         },
         watch: {
