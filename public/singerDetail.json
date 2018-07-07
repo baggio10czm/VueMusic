@@ -1,0 +1,2009 @@
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "Flisten_count1": "210000000",
+        "Fupload_time": "2015-12-18 16:44:55",
+        "index": 1,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《赤壁Online》网游主题曲",
+          "albumid": 36160,
+          "albummid": "002g6zv02X7SNi",
+          "albumname": "JJ陆",
+          "alertid": 11,
+          "belongCD": 5,
+          "cdIdx": 0,
+          "interval": 281,
+          "isonly": 0,
+          "label": "4611686153723052033",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 55928,
+            "tryend": 105836,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4505794,
+          "size320": 11264194,
+          "size5_1": 0,
+          "sizeape": 32045543,
+          "sizeflac": 32170188,
+          "sizeogg": 6166737,
+          "songid": 105388642,
+          "songmid": "003UTRfZ12wGOs",
+          "songname": "醉赤壁",
+          "songorig": "醉赤壁",
+          "songtype": 0,
+          "strMediaMid": "003UTRfZ12wGOs",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "o0024afmmj5"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "56627",
+          "Fstatus": "1",
+          "Fvid": "o0024afmmj5"
+        }
+      },
+      {
+        "Flisten_count1": "133340086",
+        "Fupload_time": "2015-05-10 17:43:31",
+        "index": 2,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 88971,
+          "albummid": "002PQCmo2azasb",
+          "albumname": "学不会",
+          "alertid": 100002,
+          "belongCD": 4,
+          "cdIdx": 0,
+          "interval": 245,
+          "isonly": 1,
+          "label": "4611686153723052033",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 69900,
+            "tryend": 97999,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3929020,
+          "size320": 9822245,
+          "size5_1": 0,
+          "sizeape": 27144952,
+          "sizeflac": 27340175,
+          "sizeogg": 5424840,
+          "songid": 102388808,
+          "songmid": "002kADrZ01iC2L",
+          "songname": "那些你很冒险的梦",
+          "songorig": "那些你很冒险的梦",
+          "songtype": 0,
+          "strMediaMid": "002kADrZ01iC2L",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "h00226mtjpm"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "86863",
+          "Fstatus": "1",
+          "Fvid": "h00226mtjpm"
+        }
+      },
+      {
+        "Flisten_count1": "125725224",
+        "Fupload_time": "2014-12-18 18:55:51",
+        "index": 3,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《这！就是街舞》第八期背景音乐|《杜鹃之巢》韩剧中文主题曲|《对我而言，可爱的她》韩剧中文片尾曲",
+          "albumid": 852443,
+          "albummid": "001IV22P1RDX7p",
+          "albumname": "新地球",
+          "alertid": 100002,
+          "belongCD": 7,
+          "cdIdx": 0,
+          "interval": 298,
+          "isonly": 1,
+          "label": "4611686018431582209",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 59247,
+            "tryend": 109936,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4773709,
+          "size320": 11933977,
+          "size5_1": 0,
+          "sizeape": 33816935,
+          "sizeflac": 33967774,
+          "sizeogg": 6640604,
+          "songid": 101555425,
+          "songmid": "004295Et37taLD",
+          "songname": "可惜没如果",
+          "songorig": "可惜没如果",
+          "songtype": 0,
+          "strMediaMid": "004295Et37taLD",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "d0015z6s2c7"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "303941",
+          "Fstatus": "1",
+          "Fvid": "d0015z6s2c7"
+        }
+      },
+      {
+        "Flisten_count1": "124529848",
+        "Fupload_time": "2010-12-07 10:45:26",
+        "index": 4,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 62342,
+          "albummid": "000TuW8h0AH2n4",
+          "albumname": "她说 概念自选辑",
+          "alertid": 11,
+          "belongCD": 4,
+          "cdIdx": 0,
+          "interval": 249,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 46939,
+            "tryend": 76758,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3992807,
+          "size320": 9972683,
+          "size5_1": 0,
+          "sizeape": 27512829,
+          "sizeflac": 28610773,
+          "sizeogg": 5793297,
+          "songid": 764255,
+          "songmid": "001nUzRq0GgCVb",
+          "songname": "当你",
+          "songorig": "当你",
+          "songtype": 0,
+          "strMediaMid": "001nUzRq0GgCVb",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "t0016apmru5"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "318611",
+          "Fstatus": "1",
+          "Fvid": "t0016apmru5"
+        }
+      },
+      {
+        "Flisten_count1": "120319099",
+        "Fupload_time": "2014-10-24 15:03:45",
+        "index": 5,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 8036,
+          "albummid": "000y5gq7449K9I",
+          "albumname": "第二天堂",
+          "alertid": 11,
+          "belongCD": 6,
+          "cdIdx": 0,
+          "interval": 267,
+          "isonly": 0,
+          "label": "4611686018431582209",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 84032,
+            "tryend": 119000,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4288463,
+          "size320": 10720855,
+          "size5_1": 0,
+          "sizeape": 30396109,
+          "sizeflac": 31486598,
+          "sizeogg": 6567464,
+          "songid": 9063002,
+          "songmid": "004TXEXY2G2c7C",
+          "songname": "江南",
+          "songorig": "江南",
+          "songtype": 0,
+          "strMediaMid": "004TXEXY2G2c7C",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "b0013k1imsl"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "49806",
+          "Fstatus": "1",
+          "Fvid": "b0013k1imsl"
+        }
+      },
+      {
+        "Flisten_count1": "119235803",
+        "Fupload_time": "2015-05-14 16:07:21",
+        "index": 6,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《爱情睡醒了》电视剧插曲",
+          "albumid": 62342,
+          "albummid": "000TuW8h0AH2n4",
+          "albumname": "她说 概念自选辑",
+          "alertid": 11,
+          "belongCD": 1,
+          "cdIdx": 0,
+          "interval": 320,
+          "isonly": 0,
+          "label": "4611686153723052033",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 71424,
+            "tryend": 116624,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 5129815,
+          "size320": 12824234,
+          "size5_1": 0,
+          "sizeape": 31102439,
+          "sizeflac": 31402641,
+          "sizeogg": 6631324,
+          "songid": 102415346,
+          "songmid": "001IpbDW34m1Gy",
+          "songname": "她说",
+          "songorig": "她说",
+          "songtype": 0,
+          "strMediaMid": "001IpbDW34m1Gy",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "o0024vn7r9w"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "142379",
+          "Fstatus": "1",
+          "Fvid": "o0024vn7r9w"
+        }
+      },
+      {
+        "Flisten_count1": "116382044",
+        "Fupload_time": "2015-12-02 22:45:37",
+        "index": 7,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 1220218,
+          "albummid": "003nbc0602Tgfx",
+          "albumname": "不为谁而作的歌",
+          "alertid": 100002,
+          "belongCD": 1,
+          "cdIdx": 0,
+          "interval": 265,
+          "isonly": 1,
+          "label": "4611686153735634945",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 1,
+            "payalbumprice": 200,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 70377,
+            "tryend": 106112,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4254198,
+          "size320": 10635181,
+          "size5_1": 0,
+          "sizeape": 31212795,
+          "sizeflac": 31418862,
+          "sizeogg": 5945078,
+          "songid": 105095766,
+          "songmid": "002K4xqW4A7m7q",
+          "songname": "不为谁而作的歌",
+          "songorig": "不为谁而作的歌",
+          "songtype": 0,
+          "strMediaMid": "002K4xqW4A7m7q",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "z00220ah8mt"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "661118",
+          "Fstatus": "1",
+          "Fvid": "z00220ah8mt"
+        }
+      },
+      {
+        "Flisten_count1": "116167981",
+        "Fupload_time": "2013-11-05 13:02:13",
+        "index": 8,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 421264,
+          "albummid": "001gqOnU3DTg2S",
+          "albumname": "因你而在",
+          "alertid": 100002,
+          "belongCD": 4,
+          "cdIdx": 0,
+          "interval": 287,
+          "isonly": 1,
+          "label": "5764607523038429185",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 46410,
+            "tryend": 102039,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4593151,
+          "size320": 11482581,
+          "size5_1": 0,
+          "sizeape": 32884595,
+          "sizeflac": 33200214,
+          "sizeogg": 6566586,
+          "songid": 5063375,
+          "songmid": "002CxSLT41D5tD",
+          "songname": "修炼爱情",
+          "songorig": "修炼爱情",
+          "songtype": 0,
+          "strMediaMid": "002CxSLT41D5tD",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "g0011qp6w2g"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "193007",
+          "Fstatus": "1",
+          "Fvid": "g0011qp6w2g"
+        }
+      },
+      {
+        "Flisten_count1": "115701244",
+        "Fupload_time": "2009-12-14 18:49:59",
+        "index": 9,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 54866,
+          "albummid": "002C0kX720gMQi",
+          "albumname": "100天",
+          "alertid": 11,
+          "belongCD": 6,
+          "cdIdx": 0,
+          "interval": 234,
+          "isonly": 0,
+          "label": "4611686153723052033",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 48401,
+            "tryend": 83195,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3763347,
+          "size320": 9399034,
+          "size5_1": 0,
+          "sizeape": 26470738,
+          "sizeflac": 27103284,
+          "sizeogg": 5323370,
+          "songid": 648231,
+          "songmid": "002E8ebM3TFWmA",
+          "songname": "背对背拥抱",
+          "songorig": "背对背拥抱",
+          "songtype": 0,
+          "strMediaMid": "002E8ebM3TFWmA",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "g0024ntxz9m"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "209008",
+          "Fstatus": "1",
+          "Fvid": "g0024ntxz9m"
+        }
+      },
+      {
+        "Flisten_count1": "114726372",
+        "Fupload_time": "2008-10-20 14:27:33",
+        "index": 10,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "联想idea Pad S9/S10笔记本主题曲|《Cries In A Distance》国语版",
+          "albumid": 36160,
+          "albummid": "002g6zv02X7SNi",
+          "albumname": "JJ陆",
+          "alertid": 11,
+          "belongCD": 7,
+          "cdIdx": 0,
+          "interval": 222,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 48428,
+            "tryend": 77880,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3558130,
+          "size320": 8880059,
+          "size5_1": 0,
+          "sizeape": 24668326,
+          "sizeflac": 25311145,
+          "sizeogg": 5245718,
+          "songid": 447257,
+          "songmid": "001N8e5Q4Gjxda",
+          "songname": "Always Online",
+          "songorig": "Always Online",
+          "songtype": 0,
+          "strMediaMid": "001N8e5Q4Gjxda",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "c0024gk06gr"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1373163",
+          "Fstatus": "1",
+          "Fvid": "c0024gk06gr"
+        }
+      },
+      {
+        "Flisten_count1": "113225697",
+        "Fupload_time": "2018-04-20 16:29:11",
+        "index": 11,
+        "isnew": 1,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 4022297,
+          "albummid": "000XAvOz4exGKL",
+          "albumname": "飞云之下",
+          "alertid": 11,
+          "belongCD": 1,
+          "cdIdx": 0,
+          "interval": 266,
+          "isonly": 0,
+          "label": "0",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 0,
+            "tryend": 0,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4419,
+              "mid": "003WlPvN2EvRaj",
+              "name": "韩红"
+            },
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4272156,
+          "size320": 10680098,
+          "size5_1": 0,
+          "sizeape": 56982240,
+          "sizeflac": 57216780,
+          "sizeogg": 5770616,
+          "songid": 213773480,
+          "songmid": "000fVqPH1RjwS3",
+          "songname": "飞云之下",
+          "songorig": "飞云之下",
+          "songtype": 0,
+          "strMediaMid": "000fVqPH1RjwS3",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": ""
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fstatus": null
+        }
+      },
+      {
+        "Flisten_count1": "113069151",
+        "Fupload_time": "2015-12-08 09:13:21",
+        "index": 12,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 62342,
+          "albummid": "000TuW8h0AH2n4",
+          "albumname": "她说 概念自选辑",
+          "alertid": 11,
+          "belongCD": 2,
+          "cdIdx": 0,
+          "interval": 253,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 72411,
+            "tryend": 103008,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4058591,
+          "size320": 10146167,
+          "size5_1": 0,
+          "sizeape": 25701718,
+          "sizeflac": 25742428,
+          "sizeogg": 5481080,
+          "songid": 105163752,
+          "songmid": "004JI7mA1UQeZq",
+          "songname": "爱笑的眼睛",
+          "songorig": "爱笑的眼睛",
+          "songtype": 0,
+          "strMediaMid": "004JI7mA1UQeZq",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "v0024my4ruo"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "64771",
+          "Fstatus": "1",
+          "Fvid": "v0024my4ruo"
+        }
+      },
+      {
+        "Flisten_count1": "112415019",
+        "Fupload_time": "2008-10-20 14:18:19",
+        "index": 13,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《爱情睡醒了》电视剧插曲",
+          "albumid": 36160,
+          "albummid": "002g6zv02X7SNi",
+          "albumname": "JJ陆",
+          "alertid": 11,
+          "belongCD": 3,
+          "cdIdx": 0,
+          "interval": 218,
+          "isonly": 0,
+          "label": "5764607658334093313",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 0,
+            "tryend": 0,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            },
+            {
+              "id": 4856,
+              "mid": "000N3nfJ398H07",
+              "name": "蔡卓妍"
+            }
+          ],
+          "size128": 3489735,
+          "size320": 8724047,
+          "size5_1": 0,
+          "sizeape": 24689333,
+          "sizeflac": 24811022,
+          "sizeogg": 4912954,
+          "songid": 447253,
+          "songmid": "003h3CYS3UxDB4",
+          "songname": "小酒窝 (国语)",
+          "songorig": "小酒窝",
+          "songtype": 0,
+          "strMediaMid": "003Ld0Fq1OxtCb",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "u00247i0xwh"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "56626",
+          "Fstatus": "1",
+          "Fvid": "u00247i0xwh"
+        }
+      },
+      {
+        "Flisten_count1": "112164361",
+        "Fupload_time": "2016-12-31 17:20:35",
+        "index": 14,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 1799714,
+          "albummid": "003nTYBs3bDc6X",
+          "albumname": "梦想的声音 第10期",
+          "alertid": 100002,
+          "belongCD": 5,
+          "cdIdx": 0,
+          "interval": 237,
+          "isonly": 1,
+          "label": "0",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 48016,
+            "tryend": 82135,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3801972,
+          "size320": 9504264,
+          "size5_1": 0,
+          "sizeape": 25567904,
+          "sizeflac": 25509449,
+          "sizeogg": 5081572,
+          "songid": 200282136,
+          "songmid": "000H3L9R1fk6DM",
+          "songname": "爱要怎么说出口 (Live)",
+          "songorig": "爱要怎么说出口",
+          "songtype": 0,
+          "strMediaMid": "000H3L9R1fk6DM",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "l0022w0l786"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1068472",
+          "Fstatus": "1",
+          "Fvid": "l0022w0l786"
+        }
+      },
+      {
+        "Flisten_count1": "111671630",
+        "Fupload_time": "2006-02-21 16:51:03",
+        "index": 15,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 8440,
+          "albummid": "002aaUOS24kcwh",
+          "albumname": "曹操",
+          "alertid": 11,
+          "belongCD": 2,
+          "cdIdx": 0,
+          "interval": 242,
+          "isonly": 0,
+          "label": "5764607658342481921",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 53560,
+            "tryend": 83561,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3874864,
+          "size320": 9683585,
+          "size5_1": 0,
+          "sizeape": 28653429,
+          "sizeflac": 29362099,
+          "sizeogg": 5208973,
+          "songid": 101014,
+          "songmid": "0003y8uR1ZZwOI",
+          "songname": "曹操",
+          "songorig": "曹操",
+          "songtype": 0,
+          "strMediaMid": "0003y8uR1ZZwOI",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "n00245z6cet"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "80646",
+          "Fstatus": "1",
+          "Fvid": "n00245z6cet"
+        }
+      },
+      {
+        "Flisten_count1": "110943758",
+        "Fupload_time": "2008-10-20 14:29:32",
+        "index": 16,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《爱情睡醒了》电视剧插曲",
+          "albumid": 36160,
+          "albummid": "002g6zv02X7SNi",
+          "albumname": "JJ陆",
+          "alertid": 11,
+          "belongCD": 10,
+          "cdIdx": 0,
+          "interval": 245,
+          "isonly": 0,
+          "label": "4611686153723052033",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 55300,
+            "tryend": 91109,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3933039,
+          "size320": 9819423,
+          "size5_1": 0,
+          "sizeape": 30519762,
+          "sizeflac": 31020075,
+          "sizeogg": 5797246,
+          "songid": 447260,
+          "songmid": "003gUMnj3mMwLZ",
+          "songname": "我还想她",
+          "songorig": "我还想她",
+          "songtype": 0,
+          "strMediaMid": "003gUMnj3mMwLZ",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "w0024takynm"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "122296",
+          "Fstatus": "1",
+          "Fvid": "w0024takynm"
+        }
+      },
+      {
+        "Flisten_count1": "110650122",
+        "Fupload_time": "2005-06-30 12:24:50",
+        "index": 17,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 8036,
+          "albummid": "000y5gq7449K9I",
+          "albumname": "第二天堂",
+          "alertid": 11,
+          "belongCD": 12,
+          "cdIdx": 0,
+          "interval": 253,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 58729,
+            "tryend": 97665,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4062946,
+          "size320": 10163193,
+          "size5_1": 0,
+          "sizeape": 30505815,
+          "sizeflac": 31343853,
+          "sizeogg": 6510357,
+          "songid": 95292,
+          "songmid": "002ASCKm3ROw7t",
+          "songname": "美人鱼",
+          "songorig": "美人鱼",
+          "songtype": 0,
+          "strMediaMid": "002ASCKm3ROw7t",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "q002490bez3"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "51602",
+          "Fstatus": "1",
+          "Fvid": "q002490bez3"
+        }
+      },
+      {
+        "Flisten_count1": "110434087",
+        "Fupload_time": "2005-06-30 11:43:18",
+        "index": 18,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 8035,
+          "albummid": "001HwwNH1inlz9",
+          "albumname": "编号89757",
+          "alertid": 11,
+          "belongCD": 12,
+          "cdIdx": 0,
+          "interval": 227,
+          "isonly": 0,
+          "label": "4611686018431582209",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 49473,
+            "tryend": 86743,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3644569,
+          "size320": 9107846,
+          "size5_1": 0,
+          "sizeape": 24969003,
+          "sizeflac": 25627145,
+          "sizeogg": 5026177,
+          "songid": 95272,
+          "songmid": "002gcuPM3LQpCi",
+          "songname": "一千年以后",
+          "songorig": "一千年以后",
+          "songtype": 0,
+          "strMediaMid": "002gcuPM3LQpCi",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "t00241glinu"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "198364",
+          "Fstatus": "1",
+          "Fvid": "t00241glinu"
+        }
+      },
+      {
+        "Flisten_count1": "109358504",
+        "Fupload_time": "2017-11-03 17:43:21",
+        "index": 19,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 2708066,
+          "albummid": "003iVYCN2NDbbo",
+          "albumname": "梦想的声音第二季 第2期",
+          "alertid": 100002,
+          "belongCD": 8,
+          "cdIdx": 0,
+          "interval": 222,
+          "isonly": 1,
+          "label": "0",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 0,
+            "tryend": 0,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3567509,
+          "size320": 8917920,
+          "size5_1": 0,
+          "sizeape": 24956744,
+          "sizeflac": 25075397,
+          "sizeogg": 4623107,
+          "songid": 207678778,
+          "songmid": "0019gCB61VcvH2",
+          "songname": "爱你 (Live)",
+          "songorig": "爱你",
+          "songtype": 0,
+          "strMediaMid": "0019gCB61VcvH2",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": ""
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fstatus": null
+        }
+      },
+      {
+        "Flisten_count1": "107368328",
+        "Fupload_time": "2014-12-26 17:38:01",
+        "index": 20,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 852443,
+          "albummid": "001IV22P1RDX7p",
+          "albumname": "新地球",
+          "alertid": 100002,
+          "belongCD": 6,
+          "cdIdx": 0,
+          "interval": 280,
+          "isonly": 1,
+          "label": "5764607523042623489",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 60404,
+            "tryend": 92963,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            },
+            {
+              "id": 13948,
+              "mid": "001fNHEf1SFEFN",
+              "name": "G.E.M. 邓紫棋"
+            }
+          ],
+          "size128": 4482002,
+          "size320": 11204489,
+          "size5_1": 0,
+          "sizeape": 32423397,
+          "sizeflac": 32614239,
+          "sizeogg": 6062905,
+          "songid": 101795113,
+          "songmid": "004EQ5TI0LEEB1",
+          "songname": "手心的蔷薇",
+          "songorig": "手心的蔷薇",
+          "songtype": 0,
+          "strMediaMid": "004EQ5TI0LEEB1",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "e0015fcdups"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "307989",
+          "Fstatus": "1",
+          "Fvid": "e0015fcdups"
+        }
+      },
+      {
+        "Flisten_count1": "107001719",
+        "Fupload_time": "2006-03-20 09:58:47",
+        "index": 21,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 8528,
+          "albummid": "003c5koT0JEhPX",
+          "albumname": "空气",
+          "alertid": 11,
+          "belongCD": 7,
+          "cdIdx": 0,
+          "interval": 256,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 51545,
+            "tryend": 84697,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4355,
+              "mid": "003MDXPR3tcGSm",
+              "name": "金莎"
+            },
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4098472,
+          "size320": 10241561,
+          "size5_1": 0,
+          "sizeape": 28932161,
+          "sizeflac": 29631775,
+          "sizeogg": 5558598,
+          "songid": 102027,
+          "songmid": "0018qunY0L4Bkx",
+          "songname": "被风吹过的夏天",
+          "songorig": "被风吹过的夏天",
+          "songtype": 0,
+          "strMediaMid": "0018qunY0L4Bkx",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "g0013u5gslq"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "278436",
+          "Fstatus": "1",
+          "Fvid": "g0013u5gslq"
+        }
+      },
+      {
+        "Flisten_count1": "106965841",
+        "Fupload_time": "2009-03-04 10:29:33",
+        "index": 22,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《乌鸦嘴妙女郎》电视剧插曲",
+          "albumid": 36160,
+          "albummid": "002g6zv02X7SNi",
+          "albumname": "JJ陆",
+          "alertid": 11,
+          "belongCD": 2,
+          "cdIdx": 0,
+          "interval": 233,
+          "isonly": 0,
+          "label": "4611686018444165121",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 57019,
+            "tryend": 74626,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3742032,
+          "size320": 9345744,
+          "size5_1": 0,
+          "sizeape": 27516876,
+          "sizeflac": 28168438,
+          "sizeogg": 5269060,
+          "songid": 447252,
+          "songmid": "0026G2Lq3Cl7ig",
+          "songname": "不潮不用花钱",
+          "songorig": "不潮不用花钱",
+          "songtype": 0,
+          "strMediaMid": "0026G2Lq3Cl7ig",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "a0024zpkc3p"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "56628",
+          "Fstatus": "1",
+          "Fvid": "a0024zpkc3p"
+        }
+      },
+      {
+        "Flisten_count1": "106184203",
+        "Fupload_time": "2015-05-10 17:43:31",
+        "index": 23,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 88971,
+          "albummid": "002PQCmo2azasb",
+          "albumname": "学不会",
+          "alertid": 100002,
+          "belongCD": 2,
+          "cdIdx": 0,
+          "interval": 229,
+          "isonly": 1,
+          "label": "4611686153723052033",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 48630,
+            "tryend": 82560,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 3674055,
+          "size320": 9184847,
+          "size5_1": 0,
+          "sizeape": 26383521,
+          "sizeflac": 26504366,
+          "sizeogg": 5066318,
+          "songid": 102388806,
+          "songmid": "001we6dR1XLuZi",
+          "songname": "学不会",
+          "songorig": "学不会",
+          "songtype": 0,
+          "strMediaMid": "001we6dR1XLuZi",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "Q0090nn1jGD"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "80213",
+          "Fstatus": "1",
+          "Fvid": "Q0090nn1jGD"
+        }
+      },
+      {
+        "Flisten_count1": "105681024",
+        "Fupload_time": "2017-11-24 18:18:07",
+        "index": 24,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 3305304,
+          "albummid": "002NRfsI2v6IJA",
+          "albumname": "梦想的声音第二季 第4期",
+          "alertid": 100002,
+          "belongCD": 6,
+          "cdIdx": 0,
+          "interval": 283,
+          "isonly": 1,
+          "label": "0",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 0,
+            "tryend": 0,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4533009,
+          "size320": 11331768,
+          "size5_1": 0,
+          "sizeape": 33045591,
+          "sizeflac": 33278418,
+          "sizeogg": 6348233,
+          "songid": 211933668,
+          "songmid": "002mBdB70woebz",
+          "songname": "输了你赢了世界又如何 (Live)",
+          "songorig": "输了你赢了世界又如何",
+          "songtype": 0,
+          "strMediaMid": "002mBdB70woebz",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "w0025lvkrsg"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1392881",
+          "Fstatus": "1",
+          "Fvid": "w0025lvkrsg"
+        }
+      },
+      {
+        "Flisten_count1": "104857122",
+        "Fupload_time": "2016-12-09 15:23:52",
+        "index": 25,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 1751081,
+          "albummid": "000sWiOb1wQgIh",
+          "albumname": "梦想的声音 第6期",
+          "alertid": 100002,
+          "belongCD": 8,
+          "cdIdx": 0,
+          "interval": 297,
+          "isonly": 1,
+          "label": "4611686018431582209",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 48425,
+            "tryend": 90438,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4763686,
+          "size320": 11908732,
+          "size5_1": 0,
+          "sizeape": 30985915,
+          "sizeflac": 30979024,
+          "sizeogg": 6384438,
+          "songid": 109773064,
+          "songmid": "003aHtmn1nqmvb",
+          "songname": "女儿情 (Live)",
+          "songorig": "女儿情",
+          "songtype": 0,
+          "strMediaMid": "003aHtmn1nqmvb",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "t0022hr72yq"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1064456",
+          "Fstatus": "1",
+          "Fvid": "t0022hr72yq"
+        }
+      },
+      {
+        "Flisten_count1": "104730573",
+        "Fupload_time": "2017-01-13 16:05:18",
+        "index": 26,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 1819469,
+          "albummid": "000XiCya3Js8Yi",
+          "albumname": "梦想的声音 第12期",
+          "alertid": 100002,
+          "belongCD": 10,
+          "cdIdx": 0,
+          "interval": 286,
+          "isonly": 1,
+          "label": "0",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 106326,
+            "tryend": 132614,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4581874,
+          "size320": 11454060,
+          "size5_1": 0,
+          "sizeape": 34847981,
+          "sizeflac": 35044240,
+          "sizeogg": 6352027,
+          "songid": 200468254,
+          "songmid": "003JlYgD1SvCYe",
+          "songname": "崇拜 (Live)",
+          "songorig": "崇拜",
+          "songtype": 0,
+          "strMediaMid": "003JlYgD1SvCYe",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "y0022tti26r"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1079218",
+          "Fstatus": "1",
+          "Fvid": "y0022tti26r"
+        }
+      },
+      {
+        "Flisten_count1": "104628780",
+        "Fupload_time": "2016-11-11 17:30:15",
+        "index": 27,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 1686607,
+          "albummid": "003T8bSi1ADxDl",
+          "albumname": "梦想的声音 第2期",
+          "alertid": 100002,
+          "belongCD": 11,
+          "cdIdx": 0,
+          "interval": 312,
+          "isonly": 1,
+          "label": "4611686018431582209",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 96863,
+            "tryend": 128405,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 5002343,
+          "size320": 12505374,
+          "size5_1": 0,
+          "sizeape": 31971674,
+          "sizeflac": 31914025,
+          "sizeogg": 6601663,
+          "songid": 109192052,
+          "songmid": "000r1Ubp2B7ZEw",
+          "songname": "我怀念的 (Live)",
+          "songorig": "我怀念的",
+          "songtype": 0,
+          "strMediaMid": "000Md2MU4TKUdw",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "j0022t07c6h"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "1058588",
+          "Fstatus": "1",
+          "Fvid": "j0022t07c6h"
+        }
+      },
+      {
+        "Flisten_count1": "104237405",
+        "Fupload_time": "2005-06-30 12:19:45",
+        "index": 28,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "《医馆笑传2》电视剧插曲",
+          "albumid": 8036,
+          "albummid": "000y5gq7449K9I",
+          "albumname": "第二天堂",
+          "alertid": 11,
+          "belongCD": 5,
+          "cdIdx": 0,
+          "interval": 255,
+          "isonly": 0,
+          "label": "4611686018435776513",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 58167,
+            "tryend": 101331,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4091785,
+          "size320": 10243650,
+          "size5_1": 0,
+          "sizeape": 30050498,
+          "sizeflac": 30816116,
+          "sizeogg": 6695032,
+          "songid": 95286,
+          "songmid": "000Ri6op1gqtad",
+          "songname": "豆浆油条",
+          "songorig": "豆浆油条",
+          "songtype": 0,
+          "strMediaMid": "000Ri6op1gqtad",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "k0024dbhnt7"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "46872",
+          "Fstatus": "1",
+          "Fvid": "k0024dbhnt7"
+        }
+      },
+      {
+        "Flisten_count1": "103992776",
+        "Fupload_time": "2014-12-26 17:38:01",
+        "index": 29,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "",
+          "albumid": 852443,
+          "albummid": "001IV22P1RDX7p",
+          "albumname": "新地球",
+          "alertid": 100002,
+          "belongCD": 11,
+          "cdIdx": 0,
+          "interval": 258,
+          "isonly": 1,
+          "label": "5764607523042623489",
+          "msgid": 14,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 1,
+            "payinfo": 1,
+            "payplay": 0,
+            "paytrackmouth": 1,
+            "paytrackprice": 200,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 53812,
+            "tryend": 87987,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4134674,
+          "size320": 10336352,
+          "size5_1": 0,
+          "sizeape": 28122049,
+          "sizeflac": 28255557,
+          "sizeogg": 5564816,
+          "songid": 101795117,
+          "songmid": "003yTXr93OYkOZ",
+          "songname": "生生",
+          "songorig": "生生",
+          "songtype": 0,
+          "strMediaMid": "003yTXr93OYkOZ",
+          "stream": 13,
+          "switch": 17413891,
+          "type": 0,
+          "vid": "i0016zh5cau"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "353557",
+          "Fstatus": "1",
+          "Fvid": "i0016zh5cau"
+        }
+      },
+      {
+        "Flisten_count1": "103631894",
+        "Fupload_time": "2007-11-05 15:10:35",
+        "index": 30,
+        "isnew": 0,
+        "listenCount": 0,
+        "musicData": {
+          "albumdesc": "2007新加坡Samsug Wgg活动主题曲",
+          "albumid": 33201,
+          "albummid": "002byTjo3vFz40",
+          "albumname": "西界",
+          "alertid": 11,
+          "belongCD": 2,
+          "cdIdx": 0,
+          "interval": 293,
+          "isonly": 0,
+          "label": "4611703473174478849",
+          "msgid": 0,
+          "pay": {
+            "payalbum": 0,
+            "payalbumprice": 0,
+            "paydownload": 0,
+            "payinfo": 0,
+            "payplay": 0,
+            "paytrackmouth": 0,
+            "paytrackprice": 0,
+            "timefree": 0
+          },
+          "preview": {
+            "trybegin": 77596,
+            "tryend": 117685,
+            "trysize": 0
+          },
+          "rate": 31,
+          "singer": [
+            {
+              "id": 4286,
+              "mid": "001BLpXF2DyJe2",
+              "name": "林俊杰"
+            }
+          ],
+          "size128": 4708771,
+          "size320": 11758752,
+          "size5_1": 0,
+          "sizeape": 33082698,
+          "sizeflac": 33996989,
+          "sizeogg": 7020782,
+          "songid": 410773,
+          "songmid": "0020CMqs1PFDi6",
+          "songname": "杀手",
+          "songorig": "杀手",
+          "songtype": 0,
+          "strMediaMid": "0020CMqs1PFDi6",
+          "stream": 13,
+          "switch": 605971,
+          "type": 0,
+          "vid": "w0024dkufet"
+        },
+        "playurl": "",
+        "price": 320,
+        "vid": {
+          "Fmv_id": "56621",
+          "Fstatus": "1",
+          "Fvid": "w0024dkufet"
+        }
+      }
+    ],
+    "singer_id": "4286",
+    "singer_mid": "001BLpXF2DyJe2",
+    "singer_name": "林俊杰",
+    "total": 451
+  },
+  "message": "succ",
+  "subcode": 0
+}
