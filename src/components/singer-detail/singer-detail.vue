@@ -1,6 +1,6 @@
 <template>
     <transition name="slide">
-        <MusicList :title="title" :bgImage="bgImage" :songs="songs" ></MusicList>
+        <MusicList :title="title" :bgImage="bgImage" :songs="songs"></MusicList>
     </transition>
 </template>
 
@@ -11,49 +11,46 @@
     import MusicList from "@/components/music-list/music-list"
 
     export default {
-        data(){
-          return{
-              songs:[]
-          }
+        data() {
+            return {
+                songs: []
+            }
         },
-        computed:{
-            title(){
+        computed: {
+            title() {
                 return this.singer.name
             },
-            bgImage(){
+            bgImage() {
                 return this.singer.avatar
             },
             ...mapGetters([
                 'singer'
             ])
         },
-        created(){
+        created() {
             this.getDetail();
         },
-        methods:{
-            getDetail(){
+        methods: {
+            getDetail() {
                 let _this = this;
                 // 用户刷新页面没有 歌手ID 就返回歌手列表
-                if(!this.singer.id){
+                if (!this.singer.id) {
                     this.$router.push('/singer')
                     return
                 }
                 // 歌手详情
-                singer.getDetail({singerId:this.singer.id},function (res) {
-                    // setTimeout 模拟异步加载 loading 效果
-                    setTimeout(()=>{
-                        _this.songs = _this._normalizeSongs(res.list)
-                    },1000)
-                },function (err) {
+                singer.getDetail({singerId: this.singer.id}, function (res) {
+                    _this.songs = _this._normalizeSongs(res.list)
+                }, function (err) {
                     console.log(err);
                 })
             },
             // 处理 歌手歌曲数据
-            _normalizeSongs(list){
+            _normalizeSongs(list) {
                 let ret = []
-                list.forEach((item)=>{
+                list.forEach((item) => {
                     let {musicData} = item
-                    if(musicData.songid && musicData.albummid){
+                    if (musicData.songid && musicData.albummid) {
                         //  createSong 依赖 song 里面的 类 （减少了很多代码）
                         ret.push(createSong(musicData))
                     }
@@ -61,7 +58,7 @@
                 return ret;
             }
         },
-        components:{
+        components: {
             MusicList
         }
     }
