@@ -8,7 +8,6 @@
     <player></player>
   </div>
 </template>
-
 <script>
 import MHeader from '@/components/m-header/m-header'
 import Tab from '@/components/tab/tab'
