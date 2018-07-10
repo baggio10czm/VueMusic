@@ -36,8 +36,8 @@
                         <span class="time time-r">{{format(currentSong.duration)}}</span>
                     </div>
                     <div class="operators">
-                        <div class="icon i-left">
-                            <i class="icon-sequence"></i>
+                        <div class="icon i-left" @click="changeMode()">
+                            <i :class="iconMode"></i>
                         </div>
                         <div class="icon i-left" :class="disableCls">
                             <i @click="prev" class="icon-prev"></i>
@@ -75,8 +75,8 @@
                 </div>
             </div>
         </transition>
-        <!-- audio 会派发 canplay 事件(在播放器准备好时)  error事件（当播放器出错时） timeupdate 更新播放时间-->
-        <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime"></audio>
+        <!-- audio 会派发 canplay 事件(在播放器准备好时)  error事件（当播放器出错时） timeupdate 更新播放时间 end事件代表歌曲播放完  -->
+        <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
     </div>
 </template>
 
@@ -86,6 +86,8 @@
     import {prefixStyle} from '@/common/js/dom'
     import ProgressBar from '@/base/progress-bar/progress-bar'
     import ProgressCircle from '@/base/progress-circle/progress-circle'
+    import {playMode} from '@/common/js/config'
+    import {shuffle} from '@/common/js/util'
 
     const transform = prefixStyle('transform')
 
@@ -104,6 +106,9 @@
             playIcon() {
                 return this.playing ? 'icon-pause' : 'icon-play';   // 控制 播放按钮图标 显示播放暂定状态
             },
+            iconMode() {
+                return this.mode === playMode.sequence ? 'icon-sequence':this.mode === playMode.loop ?'icon-loop':'icon-random'; // 控制 mini版播放按钮图标 显示播放暂定状态
+            },
             miniIcon() {
                 return this.playing ? 'icon-pause-mini' : 'icon-play-mini'; // 控制 mini版播放按钮图标 显示播放暂定状态
             },
@@ -118,7 +123,9 @@
                 'playList',    // 播放列表
                 'currentSong',  // 当前歌曲
                 'playing',      // 播放状态
-                'currentIndex'  // 当前歌曲索引
+                'currentIndex',  // 当前歌曲索引
+                'mode',  // 播放模式
+                'sequenceList'  // 原始播放列表
             ])
         },
         methods: {
@@ -132,6 +139,8 @@
                 setFullScreen: 'SET_FULL_SCREEN',        // 设置播放器全屏的值
                 setPlayingState: 'SET_PLAYING_STATE',    // 设置播放器播放状态的值
                 setCurrentIndex: 'SET_CURRENT_INDEX',    // 设置播放器当前播放歌曲索引的值
+                setPlayMode: 'SET_PLAY_MODE',
+                setPlayList: 'SET_PLAYLIST',
             }),
             enter(el, done) {
                 // 得到 起始动画物体 要移动到的 x，y坐标 与缩放比例
@@ -249,16 +258,58 @@
                 const second = (interval % 60 | 0).toString().padStart(2, '0')
                 return `${minute}:${second}`
             },
-            onProgressBarChange(percent) {     // 进度条操作触发 改变播放时间
+            // 进度条操作触发 改变播放时间
+            onProgressBarChange(percent) {
                 this.$refs.audio.currentTime = this.currentSong.duration * percent
                 if (!this.playing) {   // 如果是暂停状态，就开始播放
                     this.togglePlaying()
                 }
+            },
+            // 改变播放模式
+            changeMode(){
+                // 保证 mode 在0 - 2之间
+                const mode = (this.mode + 1 ) % 3
+                // 调用 mapMutations 设置播放模式
+                this.setPlayMode(mode)
+                let list = []
+                if(mode === playMode.random){
+                    // 当是随机播放时 重新洗牌列表
+                    list = shuffle(this.sequenceList)
+                }else {
+                    // 当是其他播放时 列表等于默认播放列表
+                    list = this.sequenceList
+                }
+                // 切换模式后 保持播放当前歌曲
+                this.resetCurrentIndex(list)
+                // // 调用 mapMutations 设置 当前播放列表
+                this.setPlayList(list)
+            },
+            // 在播放模式更改后，保持播放当前歌曲，调用mapMutations，设置当前歌曲索引
+            resetCurrentIndex(list){
+                this.setCurrentIndex(list.findIndex((item)=>{
+                    return item.id === this.currentSong.id
+                }))
+            },
+            // 当播放结束，如果循环单曲就跳下一曲
+            end(){
+                if(this.mode === playMode.loop){
+                    this.loop()
+                }else {
+                    this.next()
+                }
+            },
+            // 循环单曲播放
+            loop(){
+                this.$refs.audio.currentTime = 0
+                this.$refs.audio.play()
             }
         },
         watch: {
             // 监听 当前歌曲变化  触发播放器 play
-            currentSong() {
+            currentSong(newSong,oldSong) {
+                if(newSong.id === oldSong.id){
+                    return
+                }
                 this.$nextTick(() => {          // 数据异步获取 + $nextTick 防止出错
                     this.$refs.audio.play()
                 })

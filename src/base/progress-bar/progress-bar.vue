@@ -63,7 +63,7 @@
                 this.touch.initiated = false;                     // touch 结束
                 this._triggerPercent()
             },
-            // 派发进度条百分比
+            // 派发进度条百分比，更新播放器播放时间
             _triggerPercent() {
                 const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth      // 进度条宽度
                 const percent = this.$refs.progress.clientWidth / barWidth                  // 播放歌曲百分比
@@ -71,7 +71,10 @@
             },
             // 点击进度条 先设置偏移再派发进度条百分比，让播放器调整播放当前时间
             progressClick(e) {
-                this._offset(e.offsetX)
+                // 点击 progressBtn 的时 e.offsetX 获取不对    所以放弃使用 this._offset(e.offsetX)
+                const rect = this.$refs.progressBar.getBoundingClientRect()  //   getBoundingClientRect 返回元素的大小及其相对于视口的位置。
+                const offsetWidth = e.pageX - rect.left     // e.pageX 相对视口X轴坐标 - 进度条相对视口X轴的位置
+                this._offset(offsetWidth)
                 this._triggerPercent()
             },
             // 播放进度条 与 播放进度条按钮 偏移设置
