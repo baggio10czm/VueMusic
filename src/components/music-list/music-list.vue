@@ -6,7 +6,7 @@
         <h1 class="title" v-html="title"></h1>
         <div class="bg-image" :style="bgStyle" ref="bgImage">
             <div class="play-wrapper">
-                <div class="play" v-show="songs.length > 0" ref="playBtn"  @click="random">
+                <div class="play" v-show="songs.length > 0" ref="playBtn" @click="random">
                     <i class="icon-play"></i>
                     <span class="text">随机播放全部</span>
                 </div>
@@ -32,6 +32,7 @@
     import Loading from '@/base/loading/loading'
     import {prefixStyle} from '@/common/js/dom'
     import {mapActions} from 'vuex'
+    import {playListMixin} from '@/common/js/mixin'
 
     // 顶部预留高度
     const RESERVED_HEIGHT = 40
@@ -40,6 +41,7 @@
     const backdrop = prefixStyle('backdrop-filter')
 
     export default {
+        mixins: [playListMixin],  //多个组件复用的代码可以写一个 mixin
         name: "music-list",
         data() {
             return {
@@ -81,20 +83,25 @@
             this.$refs.list.$el.style.top = `${this.imageHeight}px`
         },
         methods: {
+            handlePlaylist(playList) {
+                const bottom = playList.length > 0 ? '60px' : ''
+                this.$refs.list.$el.style.bottom = bottom
+                this.$refs.list.refresh();
+            },
             scroll(pos) {
                 this.scrollY = pos.y
             },
             // 点击歌曲 调用 mapActions 里的 selectPlay
-            selectItem(item,index){
+            selectItem(item, index) {
                 this.selectPlay({
-                    list : this.songs,
+                    list: this.songs,
                     index
                 })
             },
             // 全部歌曲随机播放 调用 mapActions 里的 randomPlay
-            random(){
+            random() {
                 this.randomPlay({
-                    list : this.songs
+                    list: this.songs
                 })
             },
             ...mapActions([
@@ -105,25 +112,25 @@
         watch: {
             scrollY(newY) {
                 // 遮罩层向上移动的值， 取最大的 就是 图片高度- 40
-                let tranlateY = Math.max(this.minTransLateY,newY)
+                let tranlateY = Math.max(this.minTransLateY, newY)
                 let zIndex = 0  // zIndex 层级值
                 let scale = 1  // 缩放值
                 let blur = 0  // 模糊值
                 // 遮罩层 移动动画
-                this.$refs.layer.style[transform] =  `translate3d(0,${tranlateY}px,0)`
+                this.$refs.layer.style[transform] = `translate3d(0,${tranlateY}px,0)`
                 //缩放公式 滚动值/ 图片高度
-                const percent = Math.abs( newY / this.imageHeight)
+                const percent = Math.abs(newY / this.imageHeight)
                 // 当往下拉的时候 放大图片
-                if(newY > 0){
+                if (newY > 0) {
                     scale = 1 + percent
                     zIndex = 10
-                }else {
-                    blur = Math.min(20 * percent,20)
+                } else {
+                    blur = Math.min(20 * percent, 20)
                 }
                 this.$refs.filter.style[backdrop] = `blur(${blur}px)`    // IOS 才有效
 
                 // 当滚到顶部时
-                if(newY < this.minTransLateY){
+                if (newY < this.minTransLateY) {
                     zIndex = 10
                     // 图片高度层设置为0
                     this.$refs.bgImage.style.paddingTop = '0'
@@ -131,7 +138,7 @@
                     this.$refs.bgImage.style.height = `${RESERVED_HEIGHT}px`
                     // 播放按钮隐藏
                     this.$refs.playBtn.style.display = 'none'
-                }else {
+                } else {
                     // 当滚动大小 小于 最大允许高度时 恢复  1:0.7 的高度 并显示播放按钮
                     this.$refs.bgImage.style.paddingTop = '70%'
                     this.$refs.bgImage.style.height = '0'
@@ -140,7 +147,7 @@
                 // 图片层级设置
                 this.$refs.bgImage.style.zIndex = zIndex
                 // 图片缩放
-                this.$refs.bgImage.style[transform] =  `scale(${scale})`
+                this.$refs.bgImage.style[transform] = `scale(${scale})`
             }
         },
         components: {

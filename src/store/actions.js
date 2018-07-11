@@ -9,7 +9,7 @@ function findIndex(list, song) {
     })
 }
 
-// 选择歌曲播放
+// 点击歌曲播放
 export const selectPlay = function ({commit, state}, {list, index}) {
     commit(types.SET_SEQUENCE_LIST, list)
     if (state.mode === playMode.random) {              // 如果是 随机播放模式

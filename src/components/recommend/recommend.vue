@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="recommend">
-            <Scroll class="recommend-content">
+        <div class="recommend" ref="recommend">
+            <Scroll class="recommend-content" ref="scroll">
                 <div>
                     <div v-if="sliderData.length" class="slider-wrapper" ref="sliderWrapper">
                         <Slider>
@@ -42,8 +42,10 @@
     import Slider from '@/base/slider/slider.vue'
     import Scroll from '@/base/scroll/scroll.vue'
     import Loading from '@/base/loading/loading.vue'
+    import {playListMixin} from '@/common/js/mixin'
 
     export default {
+        mixins: [playListMixin],  //多个组件复用的代码可以写一个 mixin
         name: "recommend",
         data() {
             return {
@@ -55,6 +57,11 @@
             this._getSliderData();
         },
         methods: {
+            handlePlaylist(playList) {
+                const bottom = playList.length > 0 ? '60px' : ''
+                this.$refs.recommend.style.bottom = bottom
+                this.$refs.scroll.refresh();
+            },
             _getSliderData() {
                 let _this = this;
                 recommend.getData({}, function (res) {

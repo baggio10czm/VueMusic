@@ -1,5 +1,5 @@
 <template>
-    <div ref="warpper">
+    <div ref="wrapper">
         <slot></slot>
     </div>
 </template>
@@ -34,10 +34,10 @@
         },
         methods: {
             _initScroll(){
-                if(!this.$refs.warpper){
+                if(!this.$refs.wrapper){
                     return
                 }
-                this.scroll = new BScroll(this.$refs.warpper,{
+                this.scroll = new BScroll(this.$refs.wrapper,{
                     probeType:this.probeType,
                     click : this.click
                 })
@@ -54,7 +54,7 @@
             disable(){
                 this.scroll && this.scroll.disable();
             },
-            refresh(){
+            refresh(){  //重置Scroll
                 this.scroll && this.scroll.refresh();
             },
             scrollTo(){

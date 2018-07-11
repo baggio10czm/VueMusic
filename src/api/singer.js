@@ -18,5 +18,14 @@ export default {
             success : resolve,
             error   : reject
         });
+    },
+    //获取歌词
+    getLyricData(data,resolve,reject) {
+        request({
+            url     : 'lyric.json',
+            data    : data,
+            success : resolve,
+            error   : reject
+        });
     }
 }

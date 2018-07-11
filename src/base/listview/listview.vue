@@ -103,6 +103,9 @@
                 let anchorIndex = parseInt(this.touch.anchorIndex) + delta;  //当前index 等于原来的+ 最新计算出来的
                 this._scrollTo(anchorIndex);
             },
+            refresh(){
+                this.$refs.listView.refresh()
+            },
             // scroll 组件暴露出来 pos 得到实时的Y坐标
             scroll(pos) {
                 this.scrollY = pos.y;

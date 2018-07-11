@@ -1,6 +1,6 @@
 <template>
-    <div class="singer">
-        <ListView :data="singers" @select="selectSinger"></ListView>
+    <div class="singer" ref="singer">
+        <ListView :data="singers" @select="selectSinger" ref="list"></ListView>
         <router-view></router-view>
     </div>
 </template>
@@ -10,11 +10,13 @@
     import singerClass from "@/common/js/singer.js";
     import ListView from "@/base/listview/listview";
     import {mapMutations} from 'vuex'
+    import {playListMixin} from '@/common/js/mixin'
 
     const HOT_NAME = '热门'
     const HOT_SINGER_IEN = 10
 
     export default {
+        mixins: [playListMixin],  //多个组件复用的代码可以写一个 mixin
         name: "singer",
         data(){
             return{
@@ -25,6 +27,11 @@
             this._getSingerList();
         },
         methods:{
+            handlePlaylist(playList) {
+                const bottom = playList.length > 0 ? '60px' : ''
+                this.$refs.singer.style.bottom = bottom
+                this.$refs.list.refresh();    // 直接调用组件内的 refresh方法
+            },
             _getSingerList(){
                 let _this = this;
                 singer.getData({},function (res) {
