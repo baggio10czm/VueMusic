@@ -17,7 +17,7 @@
                     <div class="recommend-list">
                         <h1 class="list-title">热门歌单推荐</h1>
                         <ul>
-                            <li v-for="item in discList" class="item">
+                            <li @click="selectItem(item)" v-for="item in discList" class="item">
                                 <div class="icon">
                                     <img width="60" height="60" v-lazy="item.cover">
                                 </div>
@@ -33,6 +33,7 @@
                     <Loading></Loading>
                 </div>
             </Scroll>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -43,6 +44,7 @@
     import Scroll from '@/base/scroll/scroll.vue'
     import Loading from '@/base/loading/loading.vue'
     import {playListMixin} from '@/common/js/mixin'
+    import {mapMutations} from 'vuex'
 
     export default {
         mixins: [playListMixin],  //多个组件复用的代码可以写一个 mixin
@@ -62,13 +64,19 @@
                 this.$refs.recommend.style.bottom = bottom
                 this.$refs.scroll.refresh();
             },
+            selectItem(item){
+                this.$router.push({
+                    path:`/recommend/${item.content_id}`
+                })
+                this.setDisc(item)
+            },
             _getSliderData() {
                 let _this = this;
                 recommend.getData({}, function (res) {
-                    _this.sliderData = res.slider;
-                    _this.discList = res.songList;
+                    _this.sliderData = res.slider
+                    _this.discList = res.songList
                 }, function (error) {
-                    console.log(error);
+                    console.log(error)
                 });
             },
             //等图片加载完毕，重置scroll，解决BScroll获取容器高度出问题， 但是现在好像不用了 <img……@load="loadImage" :src="item.picUrl">
@@ -78,6 +86,9 @@
                     this.$refs.scroll.refresh()
                 }
             },
+            ...mapMutations({
+                setDisc : 'SET_DISC'
+            })
         },
         components: {
             Slider,
