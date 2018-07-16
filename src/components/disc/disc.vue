@@ -9,6 +9,7 @@
     import {mapGetters} from 'vuex'
     import {createSong} from "@/common/js/song"
     import singer from "@/api/singer"
+
     export default {
         name: "disc",
         data(){
@@ -32,6 +33,11 @@
         },
         methods:{
           _getSongList(){
+              // 用户刷新页面 如没有推荐id 就返回推荐列表
+              if (!this.disc.content_id) {
+                  this.$router.push('/recommend')
+                  return
+              }
               let _this = this;
               singer.getDetail({dissid: this.disc.content_id}, function (res) {
                   _this.songs = _this._normalizeSongs(res.list)
@@ -39,14 +45,9 @@
                   console.log(err);
               })
           },
-            // 处理 歌手歌曲数据
+            // 处理 歌曲数据
             _normalizeSongs(list) {
                 let ret = []
-                // 用户刷新页面没有 歌手ID 就返回歌手列表
-                if (!this.disc.content_id) {
-                    this.$router.push('/recommend')
-                    return
-                }
                 list.forEach((item) => {
                     let {musicData} = item
                     if (musicData.songid && musicData.albummid) {

@@ -2,6 +2,9 @@
     <div class="song-list">
         <ul>
             <li @click="selectItem(song,index)" v-for="(song,index) in songs" class="item">
+                <div class="rank" v-show="rank">
+                    <span :class="getRankCls(index)">{{getRankText(index)}}</span>
+                </div>
                 <div class="content">
                     <h2 class="name">{{song.name}}</h2>
                     <p class="desc">{{getDesc(song)}}</p>
@@ -20,6 +23,10 @@
                 default:()=>{
                     return []
                 }
+            },
+            rank:{
+                type:Boolean,
+                default : false
             }
         },
         methods:{
@@ -29,6 +36,20 @@
             // 描述数据拼接
             getDesc(song){
                 return `${song.singer}。${song.album}`
+            },
+            getRankCls(index){
+                // 当是前三名的时候 返回 Icon class 否则返回 'text
+                if(index <= 2){
+                    return `icon icon${index}`
+                }else {
+                    return 'text'
+                }
+            },
+            getRankText(index){
+                // 当排名大于三的时候 返回 index + 1 为文字
+                if (index > 2 ){
+                    return index + 1
+                }
             }
         }
     }
