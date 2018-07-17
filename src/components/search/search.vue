@@ -16,8 +16,10 @@
             </div>
         </div>
         <div class="search-result" v-show="query">
-            <Suggest :query="query"></Suggest>
+            <Suggest :query="query" @listScroll="blurInput"></Suggest>
         </div>
+        <!--点击搜索结果为歌手页面的路由显示-->
+        <router-view></router-view>
     </div>
 </template>
 
@@ -38,7 +40,7 @@
             this._getHotKey();
         },
         methods: {
-            _getHotKey() {
+            _getHotKey() {   // 搜索热词数据
                 let _this = this
                 Search.getHotKey({}, function (res) {
                     _this.hotKey = res.hotKey.slice(0, 10)
@@ -46,13 +48,14 @@
                     console.log(err)
                 })
             },
-            addQuery(query) {
-                console.log(8888);
+            addQuery(query) {   // 点击 热词时触发searchBox方法 更新搜索词
                 this.$refs.searchBox.setQuery(query)
             },
             onQueryChange(query){
-                console.log(query);
-                this.query = query
+                this.query = query  // 搜索词改变更新 并传给 Suggest 组件
+            },
+            blurInput(){
+                this.$refs.searchBox.blur() // input blur() 手机键盘就会隐藏，优化手机体验
             }
         },
         components: {

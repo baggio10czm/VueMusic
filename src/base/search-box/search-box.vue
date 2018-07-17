@@ -1,12 +1,13 @@
 <template>
     <div class="search-box">
         <i class="icon-search"></i>
-        <input type="text" :placeholder="placeholder" class="box" v-model="query">
+        <input type="text" :placeholder="placeholder" class="box" v-model="query" ref="query">
         <i @click='query=""' class="icon-dismiss" v-show="query"></i>
     </div>
 </template>
 
 <script>
+    import {debounce} from  '@/common/js/util'
     export default {
         name: "search-box",
         data(){
@@ -21,13 +22,17 @@
             }
         },
         created(){
-            this.$watch('query',(newQuery)=>{
+            // debounce 延迟200毫秒执行
+            this.$watch('query',debounce((newQuery)=>{
                 this.$emit('query',newQuery)
-            })
+            },200))
         },
         methods:{
-            setQuery(query){
+            setQuery(query){  //给外部点热词时调用此方法 更新 query
                 this.query = query
+            },
+            blur(){
+                this.$refs.query.blur()
             }
         }
     }

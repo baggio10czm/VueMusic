@@ -25,6 +25,14 @@
             listenScroll: {
                 type: Boolean,
                 default: false
+            },
+            pullUp:{   //是否实现上拉刷新
+                type:Boolean,
+                default:false
+            },
+            beforeScroll:{
+                type:Boolean,
+                default:false
             }
         },
         mounted() {
@@ -41,10 +49,22 @@
                     probeType:this.probeType,
                     click : this.click
                 })
-                if(this.listenScroll){
+                if(this.listenScroll){   //当开启 滚动监听 就给派发一个 scroll 事件 并传POS
                     let _this = this;
                     this.scroll.on('scroll',(pos)=>{
                         _this.$emit('scroll',pos);
+                    })
+                }
+                if(this.pullUp){   //当开启 上拉加载 监听滚动结束 当滚动距离为最大的Y轴距离- 50 时候 就派发一个 scrollToEnd 事件 提示可以加载下一页
+                    this.scroll.on('scrollEnd',()=>{
+                        if(this.scroll.y <= this.scroll.maxScrollY + 50){
+                            this.$emit('scrollToEnd')
+                        }
+                    })
+                }
+                if(this.beforeScroll){   // 监听 scroll 滚动之前，派发事件 可触发 input Blur() 可隐藏手机键盘
+                    this.scroll.on('beforeScrollStart',()=>{
+                        this.$emit('beforeScroll')
                     })
                 }
             },
