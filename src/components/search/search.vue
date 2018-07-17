@@ -1,15 +1,115 @@
 <template>
-    <div>
-        搜索
+    <div class="search">
+        <div class="search-box-wrapper">
+            <SearchBox ref="searchBox" @query="onQueryChange"></SearchBox>
+        </div>
+        <div class="shortcut-wrapper" v-show="!query">
+            <div class="shortcut">
+                <div class="hot-key">
+                    <h1 class="title">热门搜素</h1>
+                    <ul>
+                        <li class="item" v-for="item in hotKey" @click="addQuery(item.k)">
+                            {{item.k}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search-result" v-show="query">
+            <Suggest :query="query"></Suggest>
+        </div>
     </div>
 </template>
 
 <script>
+    import SearchBox from '@/base/search-box/search-box'
+    import Suggest from '@/components/suggest/suggest'
+    import Search from '@/api/search'
+
     export default {
-        name: "search"
+        name: "search",
+        data() {
+            return {
+                hotKey: [],
+                query: ""
+            }
+        },
+        created() {
+            this._getHotKey();
+        },
+        methods: {
+            _getHotKey() {
+                let _this = this
+                Search.getHotKey({}, function (res) {
+                    _this.hotKey = res.hotKey.slice(0, 10)
+                }, function (err) {
+                    console.log(err)
+                })
+            },
+            addQuery(query) {
+                console.log(8888);
+                this.$refs.searchBox.setQuery(query)
+            },
+            onQueryChange(query){
+                console.log(query);
+                this.query = query
+            }
+        },
+        components: {
+            SearchBox,
+            Suggest
+        }
     }
 </script>
 
-<style scoped>
+<style lang="stylus" rel="stylesheet/stylus">
+    @import "~@/common/stylus/variable"
+    @import "~@/common/stylus/mixin"
 
+    .search
+        .search-box-wrapper
+            margin: 20px
+        .shortcut-wrapper
+            position: fixed
+            top: 178px
+            bottom: 0
+            width: 100%
+            .shortcut
+                height: 100%
+                overflow: hidden
+                .hot-key
+                    margin: 0 20px 20px 20px
+                    .title
+                        margin-bottom: 20px
+                        font-size: $font-size-medium
+                        color: $color-text-l
+                    .item
+                        display: inline-block
+                        padding: 5px 10px
+                        margin: 0 20px 10px 0
+                        border-radius: 6px
+                        background: $color-highlight-background
+                        font-size: $font-size-medium
+                        color: $color-text-d
+                .search-history
+                    position: relative
+                    margin: 0 20px
+                    .title
+                        display: flex
+                        align-items: center
+                        height: 40px
+                        font-size: $font-size-medium
+                        color: $color-text-l
+                        .text
+                            flex: 1
+                        .clear
+                            extend-click()
+                            .icon-clear
+                                font-size: $font-size-medium
+                                color: $color-text-d
+        .search-result
+            position: fixed
+            width: 100%
+            top: 178px
+            bottom: 0
 </style>
