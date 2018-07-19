@@ -1,7 +1,7 @@
 import storage from 'good-storage'
 
 const SEARCH_KEY = '__search__'
-const SEARCH_MAX_LEN = 15
+const SEARCH_MAX_LEN = 15    //最大长度15
 
 const PLAY_KEY = '__play__'
 const PLAY_MAX_LEN = 200
@@ -10,16 +10,16 @@ const FAVORITE_KEY = '__favorite__'
 const FAVORITE_MAX_LEN = 200
 
 function insertArray(arr, val, compare, maxLen) {
-  const index = arr.findIndex(compare)
-  if (index === 0) {
+  const index = arr.findIndex(compare)  //  compare 动态传入判断条件
+  if (index === 0) {  //当同样的数据存在并在第一个的时候不用处理
     return
   }
-  if (index > 0) {
+  if (index > 0) { //当同样的数据存在， 先删除
     arr.splice(index, 1)
   }
-  arr.unshift(val)
+  arr.unshift(val)  // 然后在数组第一个位置 插入数据
   if (maxLen && arr.length > maxLen) {
-    arr.pop()
+    arr.pop()    // 如果传入了 数据最大数量 且超出 就删掉最后一个
   }
 }
 

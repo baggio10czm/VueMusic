@@ -109,12 +109,13 @@
                         <i :class="miniIcon" @click.stop="togglePlaying()" class="icon-mini"></i>
                     </ProgressCircle>
                 </div>
-                <div class="control">
+                <div class="control" @click.stop="showPlaylist">
                     <i class="icon-playlist"></i>
                 </div>
             </div>
         </transition>
         <!--mini 播放器 END-->
+        <PlayList ref="playList"></PlayList>
         <!-- audio 会派发 canplay 事件(在播放器准备好时)  error事件（当播放器出错时） timeupdate 更新播放时间 end事件代表歌曲播放完  -->
         <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
     </div>
@@ -130,6 +131,7 @@
     import {shuffle} from '@/common/js/util'
     import Lyric from 'lyric-parser'
     import Scroll from '@/base/scroll/scroll'
+    import PlayList from '@/components/playlist/playlist'
 
     const transform = prefixStyle('transform')
     const transition = prefixStyle('transition')
@@ -371,7 +373,7 @@
                 this.$refs.audio.currentTime = 0
                 this.$refs.audio.play()
                 if (this.currentLyric) {
-                    this.currentLyric.loop()
+                    this.currentLyric.seek(0)
                 }
             },
             //获取歌词数据，并导入 lyric-parser 处理
@@ -461,12 +463,18 @@
                 this.$refs.lyricList.$el.style[transition] = `all ${time}s`
                 this.$refs.middleL.style.opacity = opacity
                 this.$refs.middleL.style[transition] = `all ${time}s`
+            },
+            showPlaylist(){
+                this.$refs.playList.show()
             }
         },
         watch: {
             // 监听 当前歌曲变化  触发播放器 play
             currentSong(newSong, oldSong) {
-                if (newSong.id === oldSong.id) {
+                if (!newSong.id) {   //当没有歌的时候
+                    return
+                }
+                if (newSong.id === oldSong.id) {   //当歌曲没变化的时候
                     return
                 }
                 if (this.currentLyric) {   // 有歌词的话，需先停止
@@ -492,7 +500,8 @@
         components: {
             ProgressBar,
             ProgressCircle,
-            Scroll
+            Scroll,
+            PlayList
         }
     }
 </script>

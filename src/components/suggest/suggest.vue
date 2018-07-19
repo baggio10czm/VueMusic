@@ -139,6 +139,7 @@
                     //如果是歌曲数据 就调用 vuex actions 的 insertSong 插入歌曲到播放列表并全屏播放
                     this.insertSong(item)
                 }
+                this.$emit('select')
             },
             ...mapMutations({
                 setSinger:'SET_SINGER'    // 设置歌手
@@ -148,6 +149,9 @@
             ]),
             listScroll(){   // 当列表滚动前，派发listScroll事件处理 input Blur() 手机键盘隐藏，改善手机体验
                 this.$emit('listScroll')
+            },
+            refresh(){
+                this.$refs.suggest.refresh()
             }
         },
         watch: {
