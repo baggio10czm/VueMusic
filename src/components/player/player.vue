@@ -128,15 +128,16 @@
     import ProgressBar from '@/base/progress-bar/progress-bar'
     import ProgressCircle from '@/base/progress-circle/progress-circle'
     import {playMode} from '@/common/js/config'
-    import {shuffle} from '@/common/js/util'
     import Lyric from 'lyric-parser'
     import Scroll from '@/base/scroll/scroll'
     import PlayList from '@/components/playlist/playlist'
+    import {playerMixin} from '@/common/js/mixin'
 
     const transform = prefixStyle('transform')
     const transition = prefixStyle('transition')
 
     export default {
+        mixins: [playerMixin],
         name: "player",
         data() {
             return {
@@ -158,9 +159,6 @@
             playIcon() {
                 return this.playing ? 'icon-pause' : 'icon-play';   // 控制 播放按钮图标 显示播放暂定状态
             },
-            iconMode() {
-                return this.mode === playMode.sequence ? 'icon-sequence' : this.mode === playMode.loop ? 'icon-loop' : 'icon-random'; // 控制 mini版播放按钮图标 显示播放暂定状态
-            },
             miniIcon() {
                 return this.playing ? 'icon-pause-mini' : 'icon-play-mini'; // 控制 mini版播放按钮图标 显示播放暂定状态
             },
@@ -172,12 +170,8 @@
             },
             ...mapGetters([   // mapGetters 魔法糖语句 得到vux的各种值
                 'fullScreen',  // 全屏
-                'playList',    // 播放列表
-                'currentSong',  // 当前歌曲
                 'playing',      // 播放状态
                 'currentIndex',  // 当前歌曲索引
-                'mode',  // 播放模式
-                'sequenceList'  // 原始播放列表
             ])
         },
         methods: {
@@ -189,10 +183,6 @@
             },
             ...mapMutations({                            // 利用Mutations 魔法糖语句 改变vux值
                 setFullScreen: 'SET_FULL_SCREEN',        // 设置播放器全屏的值
-                setPlayingState: 'SET_PLAYING_STATE',    // 设置播放器播放状态的值
-                setCurrentIndex: 'SET_CURRENT_INDEX',    // 设置播放器当前播放歌曲索引的值
-                setPlayMode: 'SET_PLAY_MODE',
-                setPlayList: 'SET_PLAYLIST',
             }),
             enter(el, done) {
                 // 得到 起始动画物体 要移动到的 x，y坐标 与缩放比例
@@ -334,31 +324,6 @@
                 if (this.currentLyric) {
                     this.currentLyric.seek(currentTime * 1000)
                 }
-            },
-            // 改变播放模式
-            changeMode() {
-                // 保证 mode 在0 - 2之间
-                const mode = (this.mode + 1) % 3
-                // 调用 mapMutations 设置播放模式
-                this.setPlayMode(mode)
-                let list = []
-                if (mode === playMode.random) {
-                    // 当是随机播放时 重新洗牌列表
-                    list = shuffle(this.sequenceList)
-                } else {
-                    // 当是其他播放时 列表等于默认播放列表
-                    list = this.sequenceList
-                }
-                // 切换模式后 保持播放当前歌曲
-                this.resetCurrentIndex(list)
-                // // 调用 mapMutations 设置 当前播放列表
-                this.setPlayList(list)
-            },
-            // 在播放模式更改后，保持播放当前歌曲，调用mapMutations，设置当前歌曲索引
-            resetCurrentIndex(list) {
-                this.setCurrentIndex(list.findIndex((item) => {
-                    return item.id === this.currentSong.id
-                }))
             },
             // 当播放结束，如果循环单曲就跳下一曲
             end() {

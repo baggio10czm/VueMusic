@@ -5,8 +5,8 @@
             <div class="list-wrapper" @click.stop>
                 <div class="list-header">
                     <h1 class="title">
-                        <i class="icon"></i>
-                        <span class="text"></span>
+                        <i class="icon" :class="iconMode" @click="changeMode"></i>
+                        <span class="text">{{modeText}}</span>
                         <span class="clear" @click="showConfirm"><i class="icon-clear"></i></span>
                     </h1>
                 </div>
@@ -25,7 +25,7 @@
                     </transition-group>
                 </Scroll>
                 <div class="list-operate">
-                    <div class="add">
+                    <div class="add" @click="addSong">
                         <i class="icon-add"></i>
                         <span class="text">添加歌曲到队列</span>
                     </div>
@@ -35,17 +35,21 @@
                 </div>
             </div>
             <Confirm ref="confirm" text="是否清空播放列表" confirmBtnText="清空" @confirm="confirmClear"></Confirm>
+            <add-song ref="addSong"></add-song>
         </div>
     </transition>
 </template>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex'
+    import {mapActions} from 'vuex'
     import {playMode} from '@/common/js/config'
     import Scroll from '@/base/scroll/scroll'
     import Confirm from '@/base/confirm/confirm'
+    import {playerMixin} from '@/common/js/mixin'
+    import AddSong from '@/components/add-song/add-song'
 
     export default {
+        mixins: [playerMixin],
         name: "playlist",
         data() {
             return {
@@ -98,10 +102,9 @@
                 this.deleteSongList()
                 this.hide()
             },
-            ...mapMutations({
-                'setCurrentIndex': 'SET_CURRENT_INDEX',
-                'setPlayingState': 'SET_PLAYING_STATE'
-            }),
+            addSong(){
+                this.$refs.addSong.show()
+            },
             ...mapActions([
                 'deleteSong',
                 'deleteSongList'
@@ -116,16 +119,14 @@
             }
         },
         computed: {
-            ...mapGetters([
-                'sequenceList',
-                'currentSong',
-                'playList',
-                'mode',
-            ])
+            modeText(){
+                return this.mode === playMode.sequence ? '顺序播放' : this.mode === playMode.random ? '随机播放': '单曲循环'
+            }
         },
         components: {
             Scroll,
-            Confirm
+            Confirm,
+            AddSong
         }
     }
 </script>
