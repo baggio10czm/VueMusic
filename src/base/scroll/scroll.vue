@@ -33,12 +33,16 @@
             beforeScroll:{
                 type:Boolean,
                 default:false
+            },
+            refreshDelay:{   // 有些动画显示需要时间才能正常显示，so刷新重置时间动态管理
+                type:Number,
+                default:20
             }
         },
         mounted() {
             setTimeout(()=>{
                 this._initScroll();
-            },20)
+            },this.refreshDelay)
         },
         methods: {
             _initScroll(){

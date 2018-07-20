@@ -81,7 +81,10 @@ export const playerMixin = {
 // 共用 searchMixin 搜索相关
 export const searchMixin = {
   data(){
-      return{query:''}
+      return{
+          query:'',
+          refreshDelay:100
+      }
   },
   computed:{
       ...mapGetters([    // 搜索记录

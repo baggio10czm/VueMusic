@@ -122,7 +122,7 @@
 </template>
 
 <script>
-    import {mapGetters, mapMutations} from 'vuex'
+    import {mapGetters, mapMutations,mapActions} from 'vuex'
     import animations from 'create-keyframe-animation'   // create-keyframe-animation 用js实现css3动画
     import {prefixStyle} from '@/common/js/dom'
     import ProgressBar from '@/base/progress-bar/progress-bar'
@@ -184,6 +184,9 @@
             ...mapMutations({                            // 利用Mutations 魔法糖语句 改变vux值
                 setFullScreen: 'SET_FULL_SCREEN',        // 设置播放器全屏的值
             }),
+            ...mapActions([
+                'savePlayHistory'
+            ]),
             enter(el, done) {
                 // 得到 起始动画物体 要移动到的 x，y坐标 与缩放比例
                 const {x, y, scale} = this._getPosAndScale();
@@ -300,6 +303,7 @@
             },
             ready() {                        //当 播放器准备好 设置 songReady 为true
                 this.songReady = true;
+                this.savePlayHistory(this.currentSong)
             },
             error() {                       //当 播放器出错时 设置 songReady 为true ,以免出错时，影响播放器运行
                 this.songReady = true;

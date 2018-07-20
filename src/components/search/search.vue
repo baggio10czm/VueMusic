@@ -7,7 +7,7 @@
         <!-- 搜索Box -->
         <!--热门搜索 + 搜索历史 -->
         <div class="shortcut-wrapper" v-show="!query" ref="shortcutWrapper">
-            <Scroll class="shortcut" :data="shortCut" ref="shortCutRef">
+            <Scroll class="shortcut" :data="shortCut" :refreshDelay="refreshDelay" ref="shortCutRef">
                 <!-- Scroll 是根据 第一个子元素来计算的 所有要包一层div -->
                 <div>
                     <div class="hot-key">

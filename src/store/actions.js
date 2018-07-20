@@ -1,7 +1,7 @@
 import * as types from './mutations-type'
 import {playMode} from '@/common/js/config'
 import {shuffle} from "@/common/js/util";
-import {saveSearch, deleteSearch, clearSearch} from "@/common/js/cache";
+import {saveSearch, deleteSearch, clearSearch,savePlay} from "@/common/js/cache";
 
 // 找到 当前播放歌曲在 新的歌曲列表里面的index
 function findIndex(list, song) {
@@ -127,9 +127,15 @@ export const deleteSong = function ({commit, state}, song) {
     commit(types.SET_PLAYING_STATE, playingState)
 }
 
+// 清空播放列表
 export const deleteSongList = function ({commit}) {
     commit(types.SET_PLAYLIST, [])
     commit(types.SET_SEQUENCE_LIST, [])
     commit(types.SET_CURRENT_INDEX, -1)
     commit(types.SET_PLAYING_STATE, false)
+}
+
+// 保存播放歌曲记录
+export const savePlayHistory = function ({commit},song) {
+    commit(types.SET_PLAY_HISTORY, savePlay(song))
 }
