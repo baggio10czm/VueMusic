@@ -18,7 +18,7 @@
             <div class="shortcut" v-show="!query">
                 <Switches :switches="switches" :currentIndex="currentIndex" @switch="switchItem"></Switches>
                 <div class="list-wrapper">
-                    <Scroll ref="songList" class="list-scroll" v-show="currentIndex===0" :data="playHistory">
+                    <Scroll ref="songList" class="list-scroll" v-show="currentIndex===0" :data="playHistory" :refreshDelay="refreshDelay">
                         <div class="list-inner">
                             <SongList :songs="playHistory" @select="selectSong"></SongList>
                         </div>

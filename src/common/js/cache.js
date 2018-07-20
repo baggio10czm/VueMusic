@@ -6,7 +6,7 @@ const SEARCH_MAX_LEN = 15    //最大长度15
 const PLAY_KEY = '__play__'   // 历史播放记录
 const PLAY_MAX_LEN = 200
 
-const FAVORITE_KEY = '__favorite__'
+const FAVORITE_KEY = '__favorite__'     //收藏歌曲
 const FAVORITE_MAX_LEN = 200
 
 function insertArray(arr, val, compare, maxLen) {

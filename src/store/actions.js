@@ -1,7 +1,7 @@
 import * as types from './mutations-type'
 import {playMode} from '@/common/js/config'
 import {shuffle} from "@/common/js/util";
-import {saveSearch, deleteSearch, clearSearch,savePlay} from "@/common/js/cache";
+import {saveSearch, deleteSearch, clearSearch,savePlay,saveFavorite,deleteFavorite} from "@/common/js/cache";
 
 // 找到 当前播放歌曲在 新的歌曲列表里面的index
 function findIndex(list, song) {
@@ -138,4 +138,14 @@ export const deleteSongList = function ({commit}) {
 // 保存播放歌曲记录
 export const savePlayHistory = function ({commit},song) {
     commit(types.SET_PLAY_HISTORY, savePlay(song))
+}
+
+// 保存歌曲到收藏
+export const saveFavoriteList = function ({commit},song) {
+    commit(types.SET_FAVORITE_LIST, saveFavorite(song))
+}
+
+// 删除收藏的歌曲
+export const deleteFavoriteList = function ({commit},song) {
+    commit(types.SET_FAVORITE_LIST, deleteFavorite(song))
 }

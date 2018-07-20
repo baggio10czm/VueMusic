@@ -86,7 +86,7 @@
                             <i @click="next" class="icon-next"></i>
                         </div>
                         <div class="icon i-right">
-                            <i class="icon-not-favorite"></i>
+                            <i class="icon" :class="getFavoriteIcon(currentSong)" @click="toggleFavorite(currentSong)"></i>
                         </div>
                     </div>
                     <!--播放操作 END-->
@@ -116,8 +116,8 @@
         </transition>
         <!--mini 播放器 END-->
         <PlayList ref="playList"></PlayList>
-        <!-- audio 会派发 canplay 事件(在播放器准备好时)  error事件（当播放器出错时） timeupdate 更新播放时间 end事件代表歌曲播放完  -->
-        <audio ref="audio" :src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
+        <!-- audio 会派发 canplay 事件(在播放器准备好时,再快速切歌时有bug) 所以用 play ；  error事件（当播放器出错时） timeupdate 更新播放时间 end事件代表歌曲播放完  -->
+        <audio ref="audio" :src="currentSong.url" @play="ready" @error="error" @timeupdate="updateTime" @ended="end"></audio>
     </div>
 </template>
 
@@ -349,6 +349,9 @@
             getLyric() {
                 //this.currentSong 是调用了 createSong 方法有了getLyric方法 在song.js 套了new Promise((resolve, reject) 可以用.then
                 this.currentSong.getLyric().then((lyric) => {
+                    if(this.currentSong.lyric !== lyric) {    //防止快速切歌，歌词会有bug
+                        return
+                    }
                     // lyric-parser 实例化 lyric 是歌词数据，第二参数是歌词切换后回调函数
                     this.currentLyric = new Lyric(lyric, this.handleLyric)
                     if (this.playing) {  //当是播放中状态， 歌词play
@@ -448,14 +451,18 @@
                 }
                 if (this.currentLyric) {   // 有歌词的话，需先停止
                     this.currentLyric.stop()
+                    this.currentTime = 0
+                    this.playingLyric = ''
+                    this.currentLineNum = 0
                 }
                 //this.$nextTick(() => {          // 数据异步获取 + $nextTick 防止出错
                 //    this.$refs.audio.play()     // audio 播放
                 //    this.getLyric();            //  执行获取歌词函数
                 //})
-                setTimeout(() => {   // 手机比如微信切入后台时候 js 不执行 audio的end事件无法执行 所以用 setTimeout 可以防止这个问题
+                clearTimeout(this.timer)
+                this.timer = setTimeout(() => {   // 手机比如微信切入后台时候 js 不执行 audio的end事件无法执行 所以用 setTimeout 可以防止这个问题
                     this.$refs.audio.play()
-                    this.getLyric();
+                    this.getLyric()
                 }, 1000)
             },
             // 监听 当前播放器播放状态变化  选择是 paly 还是 pause

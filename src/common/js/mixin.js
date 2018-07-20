@@ -30,6 +30,7 @@ export const playListMixin = {
   }
 }
 
+
 // 共用 playerMixin 更改播放模式相关操作
 export const playerMixin = {
   methods:{
@@ -58,12 +59,35 @@ export const playerMixin = {
               return item.id === this.currentSong.id
           }))
       },
+      getFavoriteIcon(song){
+        if(this.isFavorite(song)){
+            return 'icon-favorite'
+        }
+        return 'icon-not-favorite'
+      },
+      toggleFavorite(song){
+          if(this.isFavorite(song)){
+              this.deleteFavoriteList(song)
+          }else {
+              this.saveFavoriteList(song)
+          }
+      },
+      isFavorite(song){
+         const index = this.favoriteList.findIndex((item)=>{
+             return item.id === song.id
+         })
+          return index > -1
+      },
       ...mapMutations({                            // 利用Mutations 魔法糖语句 改变vux值
           setPlayingState: 'SET_PLAYING_STATE',    // 设置播放器播放状态的值
           setCurrentIndex: 'SET_CURRENT_INDEX',    // 设置播放器当前播放歌曲索引的值
           setPlayMode: 'SET_PLAY_MODE',
           setPlayList: 'SET_PLAYLIST',
       }),
+      ...mapActions([
+          'saveFavoriteList',
+          'deleteFavoriteList'
+      ])
   },
   computed:{
       iconMode() {
@@ -74,9 +98,11 @@ export const playerMixin = {
           'sequenceList',  // 原始播放列表
           'playList',    // 播放列表
           'currentSong',  // 当前歌曲
+          'favoriteList'  // 收藏歌曲列表
       ])
   }
 }
+
 
 // 共用 searchMixin 搜索相关
 export const searchMixin = {
