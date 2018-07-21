@@ -12,6 +12,7 @@ export default class Song {
         this.duration = duration
         this.image = image
         this.url = url
+        this.lyric = ''
     }
 
     getLyric() {
@@ -20,7 +21,7 @@ export default class Song {
         }
         return new Promise((resolve, reject) => {
             singer.getLyricData({mid:this.mid},function (res) {
-                this.lyric = Base64.decode(res)// 数据需调用 Base64 转换成字符串
+                this.lyric = Base64.decode(res) // 数据需调用 Base64 转换成字符串
                 resolve(this.lyric );
             },function (err) {
                 reject('歌词出错！');

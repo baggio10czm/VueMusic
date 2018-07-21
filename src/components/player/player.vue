@@ -267,6 +267,7 @@
                 }
                 if (this.playList.length === 1) {  // 歌曲列表 只有1首歌时候 调用循环播放 防止currentSong不改变
                     this.loop()
+                    return   //不让往下走设置songReady为false，因为没改变当前播放歌曲的索引，就不会走auto.play() ,也不会走ready（） 设置songReady = true ，那播放状态就会一直是 disable
                 } else {
                     // 当前播放索引 -1
                     let index = this.currentIndex - 1
@@ -277,8 +278,8 @@
                     if (!this.playing) {                 // 当播放是暂停时 执行  togglePlaying() 更新播放按钮状态 和 cd盘转动效果
                         this.togglePlaying()
                     }
-                    this.songReady = false             // 每次操作完毕设置 songReady = false 更新播放器状态为未准备好，disable就会生效
                 }
+                this.songReady = false             // 每次操作完毕设置 songReady = false 更新播放器状态为未准备好，disable就会生效
             },
             // 下一曲
             next() {
@@ -288,6 +289,7 @@
                 }
                 if (this.playList.length === 1) {  // 歌曲列表 只有1首歌时候 调用循环播放 防止currentSong不改变
                     this.loop()
+                    return   //不让往下走 设置 songReady = false 解释在上面
                 } else {
                     // 当前播放索引 +1
                     let index = this.currentIndex + 1
@@ -298,8 +300,8 @@
                     if (!this.playing) {                // 当播放是暂停时 执行togglePlaying() 更新播放按钮状态 和 cd盘转动效果
                         this.togglePlaying()
                     }
-                    this.songReady = false       // 每次操作完毕设置 songReady = false 更新播放器状态为未准备好，disable就会生效
                 }
+                this.songReady = false       // 每次操作完毕设置 songReady = false 更新播放器状态为未准备好，disable就会生效
             },
             ready() {                        //当 播放器准备好 设置 songReady 为true
                 this.songReady = true;
@@ -349,9 +351,9 @@
             getLyric() {
                 //this.currentSong 是调用了 createSong 方法有了getLyric方法 在song.js 套了new Promise((resolve, reject) 可以用.then
                 this.currentSong.getLyric().then((lyric) => {
-                    if(this.currentSong.lyric !== lyric) {    //防止快速切歌，歌词会有bug
-                        return
-                    }
+                    //if(this.currentSong.lyric !== lyric) {    //防止快速切歌，歌词会有bug , 但是加了就不出歌词了……
+                    //    return
+                    //}
                     // lyric-parser 实例化 lyric 是歌词数据，第二参数是歌词切换后回调函数
                     this.currentLyric = new Lyric(lyric, this.handleLyric)
                     if (this.playing) {  //当是播放中状态， 歌词play
@@ -385,8 +387,9 @@
                     return
                 }
                 // 得到 X轴 Y轴 滑动距离
-                let deltaX = e.touches[0].pageX - this.touch.startX
-                let deltaY = e.touches[0].pageY - this.touch.startY
+                const touch = e.touches[0]
+                const deltaX = touch.pageX - this.touch.startX
+                const deltaY = touch.pageY - this.touch.startY
                 // 当 Y轴 滑动距离 大于 X轴滑动距离时候 return
                 if (Math.abs(deltaY) > Math.abs(deltaX)) {
                     return false
