@@ -13,8 +13,10 @@
             </div>
             <div class="filter" ref="filter"></div>
         </div>
-        <!--遮罩层-->
+        <!--往上滑动的遮罩层-->
         <div class="bg-layer" ref="layer"></div>
+        <!--往上滑动的遮罩层 END-->
+        <!-- 歌单Scroll -->
         <Scroll @scroll="scroll" :data="songs" :probe-type="probeType" :listen-scroll="listenScroll" class="list" ref="list">
             <div class="song-list-wrapper">
                 <song-list :rank="rank" :songs="songs" @select="selectItem"></song-list>
@@ -23,6 +25,7 @@
                 <Loading></Loading>
             </div>
         </Scroll>
+        <!-- 歌单Scroll END-->
     </div>
 </template>
 
@@ -148,7 +151,7 @@
                     this.$refs.bgImage.style.height = '0'
                     this.$refs.playBtn.style.display = ''
                 }
-                // 图片层级设置
+                // 图片层级设置，防止被 歌单Scroll 遮挡
                 this.$refs.bgImage.style.zIndex = zIndex
                 // 图片缩放
                 this.$refs.bgImage.style[transform] = `scale(${scale})`
