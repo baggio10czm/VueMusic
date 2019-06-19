@@ -78,8 +78,6 @@
                     snap : {  // BScroll 新版本写法
                         loop: true
                     },
-                    snapThreshold : 0.3,
-                    snapSpeed : 400,
                     click : true
                 });
                 this.slider.on('scrollEnd',()=>{

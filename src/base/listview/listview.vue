@@ -162,7 +162,7 @@
                     //  newY是负值 需要加- 来判断在哪个 listGroup 区间
                     if (-newY >= height1 && -newY < height2) {
                         this.currentIndex = i;          //满足条件 当前index更新
-                        this.diff = height2 + newY;   //diff 是用来判断 是否需要做title移动动画, newY是负值
+                        this.diff = height2 + newY;   //diff 是用来判断 是否需要做title移动动画, newY是负值 (下个区间高度-当前高度)
                         return
                     }
                 }
@@ -170,9 +170,10 @@
                 this.currentIndex = listHeight.length - 2;
             },
             diff(newVal){
-                // 当 newVal 大于0(
+                // 当 newVal 大于0 且 小于标题高度时 做偏移动画
                 let fixedTop = (newVal > 0 && newVal < TITLE_HEIGHT)? newVal - TITLE_HEIGHT : 0;
-                if (this.fixedTop === fixedTop) {   //不明白 this.fixedTop 意义何在....
+                // 再不需要偏移的时候 return 不做下面的dom操作 性能提升…… 个人觉得在上一步 0 哪里就可以return？
+                if (this.fixedTop === fixedTop) {
                     return
                 }
                 this.fixedTop = fixedTop;
