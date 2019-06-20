@@ -7,7 +7,7 @@
 <script>
     import {mapGetters} from 'vuex'
     import singer from "@/api/singer"
-    import {createSong} from "@/common/js/song"
+    import { createSong } from "@/common/js/song"
     import MusicList from "@/components/music-list/music-list"
 
     export default {
@@ -49,7 +49,8 @@
             _normalizeSongs(list) {
                 let ret = []
                 list.forEach((item) => {
-                    let {musicData} = item
+                    // 直接取出 musicData 这个对象
+                    let { musicData } = item
                     if (musicData.songid && musicData.albummid) {
                         //  createSong 依赖 song 里面的 类 （减少了很多代码）
                         ret.push(createSong(musicData))

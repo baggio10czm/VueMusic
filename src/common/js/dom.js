@@ -33,6 +33,7 @@ let vendor = (() => {
 
   for (let key in transformNames) {
     if (elementStyle[transformNames[key]] !== undefined) {
+      // 返回厂商名 or standard
       return key
     }
   }
@@ -48,6 +49,6 @@ export function prefixStyle(style) {
   if (vendor === 'standard') {
     return style
   }
-
+  // 厂商名 + 大写的首字母 + 剩余部分
   return vendor + style.charAt(0).toUpperCase() + style.substr(1)
 }

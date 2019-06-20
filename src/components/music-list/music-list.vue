@@ -119,12 +119,12 @@
         watch: {
             scrollY(newY) {
                 // 遮罩层向上移动的值， 取最大的 就是 图片高度- 40
-                let tranlateY = Math.max(this.minTransLateY, newY)
+                let translateY = Math.max(this.minTransLateY, newY)
                 let zIndex = 0  // zIndex 层级值
                 let scale = 1  // 缩放值
                 let blur = 0  // 模糊值
                 // 遮罩层 移动动画
-                this.$refs.layer.style[transform] = `translate3d(0,${tranlateY}px,0)`
+                this.$refs.layer.style[transform] = `translate3d(0,${translateY}px,0)`
                 //缩放公式 滚动值/ 图片高度
                 const percent = Math.abs(newY / this.imageHeight)
                 // 当往下拉的时候 放大图片
@@ -149,6 +149,7 @@
                     // 当滚动大小 小于 最大允许高度时 恢复  1:0.7 的高度 并显示播放按钮
                     this.$refs.bgImage.style.paddingTop = '70%'
                     this.$refs.bgImage.style.height = '0'
+                    // 播放按钮显示
                     this.$refs.playBtn.style.display = ''
                 }
                 // 图片层级设置，防止被 歌单Scroll 遮挡
