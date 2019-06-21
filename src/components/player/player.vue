@@ -254,6 +254,7 @@
                 if (!this.songReady) {
                     return
                 }
+                // 改变 playing 状态
                 this.setPlayingState(!this.playing)
                 if (this.currentLyric) {
                     this.currentLyric.togglePlay()
@@ -261,7 +262,7 @@
             },
             // 上一曲
             prev() {
-                //当播放器没有准备好 就 return
+                //当播放器没有准备好 就 return 避免快速切歌出BUG
                 if (!this.songReady) {
                     return
                 }
@@ -283,7 +284,7 @@
             },
             // 下一曲
             next() {
-                //当播放器没有准备好 就 return
+                //当播放器没有准备好 就 return 避免快速切歌出BUG
                 if (!this.songReady) {
                     return
                 }
