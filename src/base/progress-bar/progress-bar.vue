@@ -30,7 +30,7 @@
         watch: {
             percent(newPercent) {
                 if (newPercent > 0 && !this.touch.initiated) {
-                    // 需要减掉 进度条按钮的宽度 以免按钮最后会脱离进度条
+                    // 需要减掉 进度条按钮(小球)的宽度 以免按钮最后会脱离进度条
                     const barWidth = this.$refs.progressBar.clientWidth - progressBtnWidth
                     // 偏移距离  = 歌曲百分比 * 进度条长度
                     const offsetWidth = newPercent * barWidth
@@ -79,7 +79,9 @@
             },
             // 播放进度条 与 播放进度条按钮 偏移设置
             _offset(offsetWidth) {
+                // 设置播放进度条宽度
                 this.$refs.progress.style.width = `${offsetWidth}px`
+                // 进度条按钮(小球)偏移位置
                 this.$refs.progressBtn.style[transform] = `translate3d(${offsetWidth}px,0,0)`
             }
         }

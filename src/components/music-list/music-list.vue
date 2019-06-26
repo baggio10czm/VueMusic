@@ -86,7 +86,7 @@
             this.imageHeight = this.$refs.bgImage.clientHeight
             // bg-layer 遮罩层 最多向上移动距离
             this.minTransLateY = -this.imageHeight + RESERVED_HEIGHT
-            // list top值等于 图片高度
+            // list top值等于 图片高度    list是scroll组件要加$el
             this.$refs.list.$el.style.top = `${this.imageHeight}px`
         },
         methods: {

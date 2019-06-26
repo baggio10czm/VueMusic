@@ -6,7 +6,7 @@ const state = {
     playing: false,
     fullScreen: false,
     playList: [],
-    sequenceList: [],
+    sequenceList: [], // 原始列表
     mode: playMode.sequence,
     currentIndex: -1,
     disc:{},

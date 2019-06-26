@@ -323,8 +323,8 @@
             },
             // 进度条操作触发 改变播放时间
             onProgressBarChange(percent) {
-                const currentTime = this.currentSong.duration * percent
-                this.$refs.audio.currentTime = currentTime
+                // 设置 audio 的当前播放时间
+                this.$refs.audio.currentTime = this.currentSong.duration * percent
                 if (!this.playing) {   // 如果是暂停状态，就开始播放
                     this.togglePlaying()
                 }
@@ -332,7 +332,7 @@
                     this.currentLyric.seek(currentTime * 1000)
                 }
             },
-            // 当播放结束，如果循环单曲就跳下一曲
+            // 当播放结束，如果不是循环单曲就跳下一曲
             end() {
                 if (this.mode === playMode.loop) {
                     this.loop()
@@ -424,6 +424,7 @@
                         opacity = 1                   // CD图 完全显示
                     }
                 } else {
+                    // 反方向判断 开始就是1
                     if (this.touch.percent < 0.9) {
                         offsetWidth = 0
                         opacity = 1
@@ -450,7 +451,7 @@
                 if (!newSong.id) {   //当没有歌的时候
                     return
                 }
-                if (newSong.id === oldSong.id) {   //当歌曲没变化的时候
+                if (newSong.id === oldSong.id) {   //当歌曲没变化的时候，比如切换播放模式时
                     return
                 }
                 if (this.currentLyric) {   // 有歌词的话，需先停止
@@ -464,7 +465,7 @@
                 //    this.getLyric();            //  执行获取歌词函数
                 //})
                 clearTimeout(this.timer)
-                this.timer = setTimeout(() => {   // 手机比如微信切入后台时候 js 不执行 audio的end事件无法执行 所以用 setTimeout 可以防止这个问题
+                this.timer = setTimeout(() => {   // 手机比如微信切入后台时候 js 不执行， audio的end事件无法执行 所以用 setTimeout 可以防止这个问题
                     this.$refs.audio.play()
                     this.getLyric()
                 }, 1000)
