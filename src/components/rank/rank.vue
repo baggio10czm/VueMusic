@@ -26,8 +26,8 @@
     import Scroll from '@/base/scroll/scroll'
     import Loading from '@/base/loading/loading'
     import Rank from '@/api/rank'
-    import {playListMixin} from '@/common/js/mixin'
-    import {mapMutations} from 'vuex'
+    import { playListMixin } from '@/common/js/mixin'
+    import { mapMutations } from 'vuex'
 
     export default {
         mixins: [playListMixin],  //多个组件复用的代码可以写一个 mixin

@@ -6,7 +6,7 @@
 
 <script>
     import MusicList from '@/components/music-list/music-list'
-    import {mapGetters} from 'vuex'
+    import { mapGetters } from 'vuex'
     import Rank from '@/api/rank'
     import {createSong} from '@/common/js/song'
 
