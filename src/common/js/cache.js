@@ -17,7 +17,7 @@ function insertArray(arr, val, compare, maxLen) {
   if (index > 0) { //当同样的数据存在， 先删除
     arr.splice(index, 1)
   }
-  arr.unshift(val)  // 然后在数组第一个位置 插入数据
+  arr.unshift(val)  // 在数组第一个位置 插入数据
   if (maxLen && arr.length > maxLen) {
     arr.pop()    // 如果传入了 数据最大数量 且超出 就删掉最后一个
   }

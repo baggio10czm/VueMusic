@@ -15,10 +15,11 @@
                     <p class="text" v-html="getDisplayName(item)"></p>
                 </div>
             </li>
+            <!-- 可上拉加载时就一直显示加载圈 因为数据超出高度所以可这样用 -->
             <Loading v-show="hasMore" title=""></Loading>
         </ul>
         <div class="no-result-wrapper" v-show="!hasMore && !result.length">
-            <NoResult title="抱歉，暂无搜索结果"></NoResult>
+            <NoResult title="无搜索结果"></NoResult>
         </div>
     </Scroll>
 </template>

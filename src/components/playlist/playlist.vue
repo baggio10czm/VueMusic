@@ -60,6 +60,7 @@
         methods: {
             show() {
                 this.showFlag = true
+                // 显示后才渲染，所以需要刷新scroll
                 setTimeout(() => {
                     this.$refs.listContent.refresh();
                     this.scrollToCurrent(this.currentSong)
@@ -92,6 +93,7 @@
             },
             deleteOne(item) {
                 this.deleteSong(item)
+                // 当播放列表为空时，跟父级同步隐藏
                 if (!this.playList.length) {
                     this.hide()
                 }

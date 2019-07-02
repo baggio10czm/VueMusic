@@ -23,7 +23,7 @@
                             <span class="text">搜索历史</span>
                             <span class="clear" @click="showConfirm()">
                             <i class="icon-clear"></i>
-                        </span>
+                            </span>
                         </h1>
                         <SearchList :searches="searchHistory" @select="addQuery" @delete="deleteSearchHistory"></SearchList>
                     </div>

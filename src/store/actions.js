@@ -40,10 +40,10 @@ export const randomPlay = function ({commit}, {list}) {
 export const insertSong = function ({commit, state}, song) {
     let playList = state.playList.slice()           //  slice 创建一个副本，为了不修改原数组，
     let sequenceList = state.sequenceList.slice()
-    let currentIndex = state.currentIndex
+    let currentIndex = state.currentIndex           // 值类型赋值就是副本了
     //记录当前歌曲
     let cuurentSong = playList[currentIndex]
-    //查找当前列表中，是否有当前待插入的歌曲并返回所以
+    //查找当前列表中，是否有当前待插入的歌曲并返回其索引
     let findPlayIndex = findIndex(playList, song)
     //因为是插入歌曲，所以索引+1
     currentIndex++
@@ -95,7 +95,7 @@ export const deleteSearchHistory = function ({commit}, query) {
 
 // 清空搜索结果
 export const clearSearchHistory = function ({commit}) {
-    commit(types.SET_SEARCH_HISTORY, clearSearch())   // deleteSearch(query) 不仅实现了删除缓存，还会返回新的数据（数组）
+    commit(types.SET_SEARCH_HISTORY, clearSearch())   // clearSearch 不仅实现了删除缓存，还会返回新的数据（数组）
 }
 
 // 删除歌曲
@@ -112,7 +112,7 @@ export const deleteSong = function ({commit, state}, song) {
     let sIndex = findIndex(sequenceList, song)
     sequenceList.splice(sIndex, 1)
 
-    // 当前播放的索引 大于 选定歌曲在播放列表序列 or 删除的是最后一首歌曲时：当前播放索引-1
+    // 当前播放的索引 大于 选定歌曲在播放列表序列 or 删除当前歌曲是最后一首歌曲时：当前播放索引-1
     if (currentIndex > pIndex || currentIndex === playList.length) {
         currentIndex--
     }
