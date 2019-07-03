@@ -10,6 +10,7 @@
                         <span class="clear" @click="showConfirm"><i class="icon-clear"></i></span>
                     </h1>
                 </div>
+                <!-- Scroll监听data变化来刷新，因为下面删除添加是动画有延迟，所以需要更改Scroll刷新延迟 -->
                 <Scroll class="list-content" :data="sequenceList" ref="listContent" :refreshDelay="refreshDelay">
                     <transition-group name="list" tag="ul">
                         <li :key="item.id" ref="listItem" class="item" v-for="(item,index) in sequenceList" @click="selectItem(item,index)">

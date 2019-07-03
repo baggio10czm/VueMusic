@@ -9,6 +9,7 @@ const PLAY_MAX_LEN = 200
 const FAVORITE_KEY = '__favorite__'     //收藏歌曲
 const FAVORITE_MAX_LEN = 200
 
+// 插入歌曲处理
 function insertArray(arr, val, compare, maxLen) {
   const index = arr.findIndex(compare)  //  compare 动态传入判断条件
   if (index === 0) {  //当同样的数据存在并在第一个的时候不用处理
@@ -23,6 +24,7 @@ function insertArray(arr, val, compare, maxLen) {
   }
 }
 
+// 删除歌曲处理
 function deleteFromArray(arr, compare) {
   const index = arr.findIndex(compare)
   if (index > -1) {
